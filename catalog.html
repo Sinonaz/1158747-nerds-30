@@ -8,11 +8,11 @@
    <header>
       <div>
         <nav>
-          <a href="#"><img src="https://via.placeholder.com/160x65" alt=""></a>
+          <a href="index.html"><img src="https://via.placeholder.com/160x65" alt=""></a>
           <ul>
             <li><a href="#">Студия</a></li>
             <li><a href="#">Клиенты</a></li>
-            <li><a href="catalog.html">Магазин</a></li>
+            <li><a>Магазин</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
           <a href="#">Корзина</a>
@@ -24,7 +24,7 @@
          <span>Магазин готовых шаблонов</span>
       </h1>
       <div>
-         <form>
+         <form action="https://echo.htmlacademy.ru/" method="POST">
             <b>Стоимость:</b>
             <label for="price">
                <span>от</span>
@@ -38,13 +38,19 @@
                <legend>Сетка:</legend>
                <ul>
                   <li>
-                     <input type="radio" name="grid" checked>Адаптивная
+                     <label for="grid-1">
+                        <input type="radio" name="grid" id="grid-1" value="rad-1" checked>Адаптивная
+                     </label>
                   </li>
                   <li>
-                     <input type="radio" name="grid">Фиксированная
+                     <label for="grid-2">
+                        <input type="radio" name="grid" id="grid-2" value="rad-2">Фиксированная
+                     </label>
                   </li>
                   <li>
-                     <input type="radio" name="grid">Резиновая
+                     <label for="grid-3">
+                        <input type="radio" name="grid" id="grid-3" value="rad-3">Резиновая
+                     </label>
                   </li>
                </ul>
             </fieldset>
@@ -52,19 +58,29 @@
                <legend>Особенности:</legend>
                <ul>
                   <li>
-                     <input type="checkbox" name="feature" checked>Слайдер
+                     <label for="feature-1">
+                        <input type="checkbox" name="feature" id="feature-1" checked>Слайдер
+                     </label>
                   </li>
                   <li>
-                     <input type="checkbox" name="feature">Блок преимуществ
+                     <label for="feature-2">
+                        <input type="checkbox" name="feature" id="feature-2">Блок преимуществ
+                     </label>
                   </li>
                   <li>
-                     <input type="checkbox" name="feature" checked>Новости
+                     <label for="feature-3">
+                        <input type="checkbox" name="feature" id="feature-3" checked>Новости
+                     </label>
                   </li>
                   <li>
-                     <input type="checkbox" name="feature">Галерея
+                     <label for="feature-4">
+                        <input type="checkbox" name="feature" id="feature-4">Галерея
+                     </label>
                   </li>
                   <li>
-                     <input type="checkbox" name="feature">Корзина
+                     <label for="feature-5">
+                        <input type="checkbox" name="feature" id="feature-5">Корзина
+                     </label>
                   </li>
                </ul>
             </fieldset>
@@ -75,13 +91,13 @@
             <div>
                <b>Сортировать:</b>
                <div>
-                  <a href="#">По цене</a>
-                  <a href="#">По типу</a>
-                  <a href="#">По названию</a>
+                  <button type="button">По цене</button>
+                  <button type="button">По типу</button>
+                  <button type="button">По названию</button>
                </div>
                <div>
-                  <a href="#"></a>
-                  <a href="#"></a>
+                  <button type="button"></button>
+                     <button type="button"></button>
                </div>
                <ul>
                   <li>
