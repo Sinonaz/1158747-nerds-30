@@ -21,7 +21,7 @@
    --gray-shadow-active-color:         #C0C0C0;
    --logo-active-color:                #A6A6A6;
    --social-icon-fefault:              #E1E1E1;
-   --catalog-form-text-color:          #283136;
+   --default-text-color:               #283136;
    --catalog-input-default-color:      #B8B8B8;
    --catalog-form-hover-color:         #4D4D4D;
    --catalog-form-text-blocked-color:  #BFC2C3;
@@ -35,7 +35,7 @@
    --mask-top-hover-color:             #4D4D4D;
    --mask-text-color:                  #666666;
    --mask-name-hover-color:            #FB565A;
-   --mask-name-active-color:           #B3B3B3;         
+   --mask-name-active-color:           #B3B3B3;
    --user-form-default-color:          #D7DCDE;
    --user-form-hover-color:            #B4B9BB;
    --user-form-default-text-color:     #A2A2A2;
@@ -45,5 +45,41 @@
    --user-form-hover-close-color:      #FB565A;
    --user-form-active-close-color:     #FFEFEF;
    --default-transition-settings:      0.15s ease-in-out;
-   --mask-transition-settings:         0.30s ease-in-out; 
+   --mask-transition-settings:         0.30s ease-in-out;
 }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto.woff2") format("woff2"),
+    url("../fonts/roboto.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+    url("../fonts/robotomedium.woff") format("woff");
+  font-weight: 500;
+  font-style: medium;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+    url("../fonts/robotomedium.woff") format("woff");
+  font-weight: 700;
+  font-style: bold;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  font-weight: normal;
+  color: var(--default-text-color);
+  background-color: var(--white-default-color);
+
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
