@@ -7,17 +7,21 @@
    --red-hover-color:                  #E74246;
    --red-active-color:                 #D7373B;
    --red-shadow-active-color:          #C23235;
+   --red-button-text-active:           #E37375;
    --green-default-color:              #00CA74;
    --green-hover-color:                #00BC6C;
    --green-active-color:               #00AA62;
    --green-shadow-active-color:        #009958;
+   --green-button-text-active:         #4CC391;
    --yellow-default-color:             #EFC84A;
    --yellow-hover-color:               #EAB534;
    --yellow-active-color:              #E5A722;
    --yellow-shadow-active-color:       #CF971F;
+   --yellow-button-text-active:        #EDC164;
    --gray-default-color:               #EEEEEE;
    --gray-hover-color:                 #DFDFDF;
    --gray-active-color:                #D5D5D5;
+   --gray-text-active-color:           #A7A7A7;
    --gray-shadow-active-color:         #C0C0C0;
    --logo-active-color:                #A6A6A6;
    --social-icon-fefault:              #E1E1E1;
@@ -78,6 +82,7 @@ body {
   line-height: 24px;
   color: var(--default-text-color);
   background-color: var(--white-default-color);
+  transition: var(--default-transition-settings);
 }
 img {
   max-width: 100%;
@@ -94,6 +99,19 @@ a {
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
+  color: var(--black-default-color);
+}
+.nav_list_item:hover {
+  color: var(--red-default-color);
+}
+.nav_list_item:active {
+  color: var(--gray-text-active-color);
+}
+.nav_bin:hover {
+  color: var(--red-default-color);
+}
+.nav_bin:active {
+  color: var(--gray-text-active-color);
 }
 .slide_title {
   font-weight: 500;
@@ -113,6 +131,21 @@ a {
   line-height: 30px;
   color: var(--black-default-color);
   text-transform: uppercase;
+}
+.service-1 .button:active {
+  color: var(--red-button-text-active);
+}
+.service-2 .button {
+  background-color: var(--green-default-color);
+}
+.service-3 .button {
+  background-color: var(--yellow-default-color);
+}
+.service-2 .button:active {
+  color: var(--green-button-text-active);
+}
+.service-3 .button:active {
+  color: var(--yellow-button-text-active)
 }
 .studio_info_title {
   font-weight: 500;
