@@ -74,12 +74,97 @@ body {
   padding: 0;
   font-family: "Roboto";
   font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
   color: var(--default-text-color);
   background-color: var(--white-default-color);
-
 }
 img {
   max-width: 100%;
   height: auto;
 }
-
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--black-default-color);
+}
+.main_header {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.slide_title {
+  font-weight: 500;
+  font-size: 55px;
+  color: var(--black-default-color);
+}
+.button {
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--white-default-color);
+  background: #FB565A;
+  border-radius: 3px;
+}
+.service_title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--black-default-color);
+  text-transform: uppercase;
+}
+.studio_info_title {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  color: var(--black-default-color);
+}
+.studio_info_list_title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.studio_info_table_title {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--black-default-color);
+}
+strong {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--black-default-color);
+}
+sup {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 40px;
+  color: var(--black-default-color);
+}
+td {
+  line-height: 18px;
+}
+.contact_adress_title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--black-default-color);
+ }
+ address {
+  line-height: 18px;
+  color: #666666;
+ }
+.contact_tel {
+  color: #666666;
+}
+.discount_title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--black-default-color);
+}
+.discount_text {
+  line-height: 22px;
+  color: #444444;
+}
