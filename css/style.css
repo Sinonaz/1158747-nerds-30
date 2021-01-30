@@ -51,153 +51,290 @@
    --default-transition-settings:      0.15s ease-in-out;
    --mask-transition-settings:         0.30s ease-in-out;
 }
-
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/roboto.woff2") format("woff2"),
+  src: 
+    local("Roboto"),
+    local("Roboto-Regular"),
+    url("../fonts/roboto.woff2") format("woff2"),
     url("../fonts/roboto.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/robotomedium.woff2") format("woff2"),
+  src: 
+    local("Roboto"),
+    local("Roboto-Medium"),
+    url("../fonts/robotomedium.woff2") format("woff2"),
     url("../fonts/robotomedium.woff") format("woff");
   font-weight: 500;
   font-style: medium;
 }
+
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/robotobold.woff2") format("woff2"),
+  src: 
+    local("Roboto"),
+    local("Roboto-Bold"),
+    url("../fonts/robotobold.woff2") format("woff2"),
     url("../fonts/robotomedium.woff") format("woff");
   font-weight: 700;
   font-style: bold;
 }
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto";
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: normal;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   color: var(--default-text-color);
-  background-color: var(--white-default-color);
-  transition: var(--default-transition-settings);
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: var(--black-default-color);
 }
+
+button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: var(--default-transition-settings);
+}
+
 .main_header {
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
   color: var(--black-default-color);
+  background-color: var(--gray-default-color);
 }
+
+.nav_list_item {
+  transition: var(--default-transition-settings);
+}
+
 .nav_list_item:hover {
   color: var(--red-default-color);
 }
+
 .nav_list_item:active {
   color: var(--gray-text-active-color);
 }
+
+.nav_bin {
+  transition: var(--default-transition-settings);
+}
+
 .nav_bin:hover {
   color: var(--red-default-color);
 }
+
 .nav_bin:active {
   color: var(--gray-text-active-color);
 }
+
+.advantages {
+  background-color: var(--gray-default-color);
+}
+
 .slide_title {
   font-weight: 500;
   font-size: 55px;
+  line-height: 1;
   color: var(--black-default-color);
 }
+
 .button {
-  line-height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.12;
   text-transform: uppercase;
+  text-align: center;
   color: var(--white-default-color);
   background: #FB565A;
   border-radius: 3px;
+  transition: var(--default-transition-settings);
+  min-width: 240px;
+  min-height: 50px;
 }
+
+.button:hover {
+  background-color: var(--red-hover-color);
+}
+
+.button:active {
+  background-color: var(--red-active-color);
+  box-shadow: inset 0px 3px 0px var(--red-shadow-active-color);
+}
+
 .service_title {
   font-weight: bold;
   font-size: 24px;
-  line-height: 30px;
+  line-height: 1.25;
   color: var(--black-default-color);
   text-transform: uppercase;
 }
+
+.service-1::before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 146px;
+  background-color: var(--red-default-color);
+}
+
+.service-2::before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 146px;
+  background-color: var(--green-default-color);
+}
+
+.service-3::before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 146px;
+  background-color: var(--yellow-default-color);
+}
+.service_button {
+  min-width: 160px;
+}
+
 .service-1 .button:active {
   color: var(--red-button-text-active);
+  box-shadow: inset 0px 3px 0px var(--red-shadow-active-color);
 }
+
 .service-2 .button {
   background-color: var(--green-default-color);
 }
+
+.service-2 .button:hover {
+  background-color: var(--green-hover-color);
+}
+
+.service-2 .button:active {
+  color: var(--green-button-text-active);
+  background-color: var(--green-active-color);
+  box-shadow: inset 0px 3px 0px var(--green-shadow-active-color);
+}
+
 .service-3 .button {
   background-color: var(--yellow-default-color);
 }
-.service-2 .button:active {
-  color: var(--green-button-text-active);
+
+.service-3 .button:hover {
+  background-color: var(--yellow-hover-color);
 }
+
 .service-3 .button:active {
-  color: var(--yellow-button-text-active)
+  color: var(--yellow-button-text-active);
+  background-color: var(--yellow-active-color);
+  box-shadow: inset 0px 3px 0px var(--yellow-shadow-active-color);
 }
+
 .studio_info_title {
   font-weight: 500;
   font-size: 45px;
-  line-height: 45px;
+  line-height: 1;
   color: var(--black-default-color);
 }
+
 .studio_info_list_title {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 .studio_info_table_title {
   font-weight: bold;
   text-transform: uppercase;
   color: var(--black-default-color);
 }
+
 strong {
   font-weight: bold;
   font-size: 45px;
   line-height: 64px;
   color: var(--black-default-color);
 }
+
 sup {
   font-weight: bold;
   font-size: 26px;
-  line-height: 40px;
+  line-height: 1.42;
   color: var(--black-default-color);
 }
+
 td {
-  line-height: 18px;
+  line-height: 1.12;
 }
+
 .contact_adress_title {
   font-weight: bold;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 1.67;
   text-transform: uppercase;
   color: var(--black-default-color);
  }
+
  address {
-  line-height: 18px;
+  line-height: 1.12;
   color: #666666;
  }
+
 .contact_tel {
   color: #666666;
 }
+
+button:hover {
+  background-color: var(--red-hover-color);
+}
+
+button:active {
+  color: var(--red-button-text-active);
+  background-color: var(--red-active-color);
+}
+
+.social_item:hover {
+  background-color: var(--red-hover-color);
+}
+
+.social_item:active {
+  background-color: var(--red-active-color);
+}
+
 .discount_title {
   font-weight: bold;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
   color: var(--black-default-color);
 }
+
 .discount_text {
-  line-height: 22px;
+  line-height: 1.37;
   color: #444444;
 }
