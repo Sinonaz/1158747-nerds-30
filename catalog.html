@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Магазин готовых шаблонов</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/icons/152.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/icons/152.png">
-    <link rel="manifest" href="manifest.webmanifest">
-  </head>
-  <body>
-   <header class="main_header">
-      <div class="container">
-        <nav class="main_nav">
-          <a href="index.html"><img src="img/logos/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a>
-          <ul>
-            <li><a href="#">Студия</a></li>
-            <li><a href="#">Клиенты</a></li>
+
+<head>
+	<meta charset="utf-8">
+	<title>Магазин готовых шаблонов</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="favicon.ico">
+	<link rel="icon" href="img/icons/152.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="img/icons/152.png">
+	<link rel="manifest" href="manifest.webmanifest">
+</head>
+
+<body>
+	<header class="main_header">
+		<div class="container">
+			<nav class="main_nav">
+				<a href="index.html"><img class="main_header_logo" src="img/logos/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a>
+          <ul class="nav_list">
+            <li><a class="nav_list_item" href="#">Студия</a></li>
+            <li><a class="nav_list_item" href="#">Клиенты</a></li>
             <li><a>Магазин</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a class="nav_list_item" href="#">Контакты</a></li>
           </ul>
-          <a href="#">Корзина</a>
+          <a class="nav_bin" href="#">Корзина</a>
         </nav>
       </div>
     </header>
@@ -29,167 +31,193 @@
       <h1>
          <span>Магазин готовых шаблонов</span>
       </h1>
-      <div>
+      <div class="container">
          <form action="https://echo.htmlacademy.ru/" method="POST">
-            <b>Стоимость:</b>
+            <b class="form_title">Стоимость:</b>
             <label for="price">
                <span>от</span>
-               <input type="number" name="price" id="price" min="0" max="15000" value="0">
+               <input class="number_place" type="number" name="price" id="price" min="0" max="15000" value="0">
             </label>
             <label for="price-2">
                <span>до</span>
-               <input type="number" name="price" id="price-2" min="0" max="15000" value="15000">
+               <input class="number_place" type="number" name="price" id="price-2" min="0" max="15000" value="15000">
             </label>
             <fieldset>
-               <legend>Сетка:</legend>
-               <ul>
-                  <li>
+               <legend class="form_title">Сетка:</legend>
+               <ul class="grid_list">
+                  <li class="grid_item feature_item">
                      <label for="grid-1">
-                        <input type="radio" name="grid" id="grid-1" value="adaptive" checked>Адаптивная
+                        <input class="sort_item" type="radio" name="grid" id="grid-1" value="adaptive" checked>Адаптивная
                      </label>
                   </li>
-                  <li>
+                  <li class="grid_item feature_item">
                      <label for="grid-2">
-                        <input type="radio" name="grid" id="grid-2" value="fixed">Фиксированная
+                        <input class="sort_item" type="radio" name="grid" id="grid-2" value="fixed">Фиксированная
                      </label>
                   </li>
-                  <li>
+                  <li class="grid_item feature_item">
                      <label for="grid-3">
-                        <input type="radio" name="grid" id="grid-3" value="stretch">Резиновая
+                        <input class="sort_item" type="radio" name="grid" id="grid-3" value="stretch">Резиновая
                      </label>
                   </li>
                </ul>
             </fieldset>
             <fieldset>
-               <legend>Особенности:</legend>
-               <ul>
-                  <li>
+               <legend class="form_title">Особенности:</legend>
+               <ul class="features_list">
+                  <li class="feature_item">
                      <label for="feature-1">
-                        <input type="checkbox" name="feature" id="feature-1" checked>Слайдер
+                        <input class="sort_item" type="checkbox" name="feature" id="feature-1" checked>Слайдер
                      </label>
                   </li>
-                  <li>
+                  <li class="feature_item">
                      <label for="feature-2">
-                        <input type="checkbox" name="feature" id="feature-2">Блок преимуществ
+                        <input class="sort_item" type="checkbox" name="feature" id="feature-2">Блок преимуществ
                      </label>
                   </li>
-                  <li>
+                  <li class="feature_item">
                      <label for="feature-3">
-                        <input type="checkbox" name="feature" id="feature-3" checked>Новости
+                        <input class="sort_item" type="checkbox" name="feature" id="feature-3" checked>Новости
                      </label>
                   </li>
-                  <li>
+                  <li class="feature_item">
                      <label for="feature-4">
-                        <input type="checkbox" name="feature" id="feature-4">Галерея
+                        <input class="sort_item" type="checkbox" name="feature" id="feature-4">Галерея
                      </label>
                   </li>
-                  <li>
+                  <li class="feature_item">
                      <label for="feature-5">
-                        <input type="checkbox" name="feature" id="feature-5">Корзина
+                        <input class="sort_item" type="checkbox" name="feature" id="feature-5">Корзина
                      </label>
                   </li>
                </ul>
             </fieldset>
-            <button type="submit">Показать</button>
+            <button class="button form_button" type="submit">Показать</button>
          </form>
-         <section>
+         <section class="catalog">
             <h2>Каталог товаров</h2>
-            <div>
-               <b>Сортировать:</b>
-               <div>
-                  <button type="button">По цене</button>
-                  <button type="button">По типу</button>
-                  <button type="button">По названию</button>
+            <div class="container">
+               <b class="form_title">Сортировать:</b>
+               <div class="sort_buttons">
+                  <button class="sort_button" type="button">По цене</button>
+                  <button class="sort_button" type="button">По типу</button>
+                  <button class="sort_button" type="button">По названию</button>
                </div>
-               <div>
-                  <button type="button"></button>
-                     <button type="button"></button>
+               <div class="shape_button">
+                  <button class="shape shape-1" type="button">
+                    <svg class="arrow" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.5 10L0 0H11"/>
+                    </svg>
+                  </button>
+                  <button class="shape shape-2" type="button">
+                    <svg class="arrow" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.5 0L0 10H11L5.5 0Z"/>
+                    </svg>
+                  </button>
                </div>
-               <ul>
-                  <li>
-                     <img src="img/img-sedona.jpg" width="368" height="578" alt="Sedona">
-                     <div>
-                        <b>Sedona</b>
-                        <p>Информационный сайт для туристов</p>
-                        <a href="#">9 900 ₽</a>
-                     </div>
+               <ul class="catalog_list">
+                  <li class="catalog_item">
+                    <img class="catalog_img" src="img/img-sedona.jpg" width="358" height="578" alt="Sedona">
+                    <div class="mask sedona_mask">
+                      <a href="" class="mask_title">Sedona</a>
+                      <p class="mask_text">Информационный сайт для туристов</p>
+                      <a class="button mask_button" href="#">9 900 ₽</a>
+                    </div>
                   </li>
-                  <li>
-                     <img src="img/img-pink.jpg" width="358" height="578" alt="Pink App">
-                     <div>
-                     <b>Pink App</b>
-                     <p>Продуктовый лендинг приложения для iOS и Android</p>
-                        <a href="#">9 900 ₽</a>
-                     </div>
+                  <li class="catalog_item">
+                    <img src="img/img-pink.jpg" width="358" height="578" alt="Pink App">
+                    <div class="mask pink_mask">
+                      <a href="" class="mask_title">Pink App</a>
+                      <p class="mask_text">Продуктовый лендинг приложения для iOS и Android</p>
+                      <a class="button mask_button" href="#">9 900 ₽</a>
+                    </div>
                   </li>
-                  <li>
-                     <img src="img/img-barbershop.jpg" width="358" height="578" alt="Barbershop">
-                     <div>
-                     <b>Barbershop</b>
-                     <p>Сайт салона красоты. Для мужчин, да.</p>
-                        <a href="#">9 900 ₽</a>
-                     </div>
+                  <li class="catalog_item">
+                    <img class="catalog_img" src="img/img-barbershop.jpg" width="358" height="578" alt="Barbershop">
+                    <div class="mask barbershop_mask">
+                      <a href="" class="mask_title">Barbershop</a>
+                      <p class="mask_text">Сайт салона красоты. Для мужчин, да.</p>
+                      <a class="button mask_button" href="#">9 900 ₽</a>
+                    </div>
                   </li>
-                  <li>
-                     <img src="img/img-mishka.jpg" width="358" height="578" alt="MISHKA">
-                     <div>
-                     <b>MISHKA</b>
-                     <p>Интернет-магазин вязаных игрушек</p>
-                        <a href="#">9 900 ₽</a>
-                     </div>
+                  <li class="catalog_item">
+                    <img class="catalog_img" src="img/img-mishka.jpg" width="358" height="578" alt="MISHKA">
+                    <div class="mask mishka_mask">
+                      <a href="" class="mask_title">MISHKA</a>
+                      <p class="mask_text">Интернет-магазин вязаных игрушек</p>
+                      <a class="button mask_button" href="#">9 900 ₽</a>
+                    </div>
                   </li>
-                  <li>
-                     <img src="img/img-aplus.jpg" width="358" height="578" alt="A Plus">
-                     <div>
-                     <b>A Plus</b>
-                     <p>Лендинг курсов повышения квалификации</p>
-                        <a href="#">9 900 ₽</a>
-                     </div>
+                  <li class="catalog_item">
+                    <img class="catalog_img" src="img/img-aplus.jpg" width="358" height="578" alt="A Plus">
+                    <div class="mask aplus_mask">
+                      <a href="" class="mask_title">A Plus</a>
+                      <p class="mask_text">Лендинг курсов повышения квалификации</p>
+                      <a class="button mask_button" href="#">9 900 ₽</a>
+                    </div>
                   </li>
-                  <li>
-                     <img src="img/img-kvast.jpg" alt="КВАСТ">
-                     <div>
-                     <b>КВАСТ</b>
-                     <p>Промо-сайт производителя крафтового кваса</p>
-                        <a href="#">9 900 ₽</a>
-                     </div>
+                  <li class="catalog_item">
+                    <img class="catalog_img" src="img/img-kvast.jpg" alt="КВАСТ">
+                    <div class="mask kvast_mask">
+                      <a href="" class="mask_title">КВАСТ</a>
+                      <p class="mask_text">Промо-сайт производителя крафтового кваса</p>
+                      <a class="button mask_button" href="#">9 900 ₽</a>
+                    </div>
                   </li>
                </ul>
-               <ul>
-                  <li><a>1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">Следующая</a></li>
+               <ul class="pagination_list">
+                  <li><a class="pagination pag-1 button form_button">1</a></li>
+                  <li><a class="pagination pag-2 button form_button" href="#">2</a></li>
+                  <li><a class="pagination pag-3 button form_button" href="#">3</a></li>
+                  <li><a class="pag-4 button form_button" href="#">Следующая</a></li>
                </ul>
             </div>
          </section>
       </div>
-      <section>
-         <h2>Контакты</h2>
-         <div>
-           <img src="img/map1.jpg" width="1440" height="416" alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-         </div>
-         <div>
-           <img src="img/map-marker1.jpg" width="231" height="190" alt="Метка на карте">
-         </div>
-         <div>
-           <b>NЁRDS DESIGN STUDIO</b>
-             <address>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-             <a href="tel:+78122757575">+7 (812) 275-75-75</a>
-             <button type="button">Напишите нам</button>
-         </div>
-       </section>
-    </main>
-    <footer>
-      <ul>
-        <li><a href="#"><img src="img/icons/vk-icon.svg" width="81" height="81" alt="Vkontakte"></a></li>
-        <li><a href="#"><img src="img/icons/fb-icon.svg" width="81" height="81" alt="Facebook"></a></li>
-        <li><a href="#"><img src="img/icons/insta-icon.svg" width="81" height="81" alt="Instagram"></a></li>
-      </ul>
-    <div>
-      <b>Давайте дружить, это выгодно!</b>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
-    </div>
-  </footer>
+      <section class="contacts">
+        <h2>Контакты</h2>
+        <div class="contact_map">
+          <img src="img/map1.jpg" width="1440" height="416" alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        </div>
+        <div class="contacts_map_marker">
+          <img src="img/map-marker1.jpg" width="231" height="190" alt="Метка на карте">
+        </div>
+        <div class="contact_ardess">
+          <b class="contact_adress_title">NЁRDS DESIGN STUDIO</b>
+            <address>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+            <a class="contact_tel" href="tel:+78122757575">+7 (812) 275-75-75</a>
+            <button class="button" type="button">Напишите нам</button>
+        </div>
+      </section>
+		</main>
+      <footer class="main_footer">
+        <ul class="social_list">
+          <li>
+            <a class="social_item" href="#">
+              <svg class="vk_icon" width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.138 11.51C17.094 11.201 18.318 13.55 19.621 14.449C20.599 15.13 21.348 14.983 21.348 14.983L24.821 14.933C24.821 14.933 26.636 14.821 25.778 13.379C25.707 13.259 25.275 12.31 23.193 10.357C21.016 8.31404 21.311 8.64504 23.932 5.11304C25.529 2.96004 26.168 1.64504 25.968 1.08504C25.776 0.546037 24.603 0.686037 24.603 0.686037L20.69 0.713037C20.309 0.714037 19.986 0.832037 19.839 1.22804C19.836 1.23204 19.218 2.89404 18.394 4.30704C16.653 7.29604 15.958 7.45504 15.67 7.26804C15.009 6.83504 15.176 5.53104 15.176 4.60404C15.176 1.70704 15.608 0.499037 14.33 0.187037C13.903 0.0830374 13.591 0.0150374 12.502 0.00503741C11.11 -0.0159626 9.92797 0.00503743 9.25797 0.334037C8.81297 0.557037 8.47197 1.04604 8.67897 1.07404C8.93897 1.10904 9.52197 1.23404 9.83397 1.66004C10.235 2.21204 10.223 3.44904 10.223 3.44904C10.223 3.44904 10.452 6.86004 9.68297 7.28304C9.15497 7.57304 8.43297 6.98104 6.87997 4.26704C6.08697 2.87904 5.48797 1.34504 5.48797 1.34504C5.48797 1.34504 5.37197 1.06004 5.16197 0.904037C4.91197 0.719037 4.56197 0.660037 4.56197 0.660037L0.84797 0.684037C0.84797 0.684037 0.28997 0.700037 0.0849697 0.946037C-0.0970303 1.16404 0.0699697 1.61404 0.0699697 1.61404C0.0699697 1.61404 2.97897 8.49504 6.27297 11.961C9.29297 15.143 12.725 14.932 12.725 14.932H14.28C14.28 14.932 14.749 14.878 14.989 14.62C15.213 14.38 15.203 13.929 15.203 13.929C15.203 13.929 15.172 11.82 16.138 11.51Z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social_item" href="#">
+              <svg class="fb_icon" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="social_item" href="#">
+              <svg class="insta_icon" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      <div class="discount">
+        <b class="discount_title">Давайте дружить, это выгодно!</b>
+        <p class="discount_text">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </footer>
   </body>
 </html>
