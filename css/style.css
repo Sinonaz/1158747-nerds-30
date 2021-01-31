@@ -23,8 +23,10 @@
    --gray-active-color:                #D5D5D5;
    --gray-text-active-color:           #A7A7A7;
    --gray-shadow-active-color:         #C0C0C0;
+   --gray-text-default-color:          #B2B2B2;
+   --gray-text-hover-color:            #666666;
    --logo-active-color:                #A6A6A6;
-   --social-icon-fefault:              #E1E1E1;
+   --social-icon-default:              #E1E1E1;
    --default-text-color:               #283136;
    --catalog-input-default-color:      #B8B8B8;
    --catalog-form-hover-color:         #4D4D4D;
@@ -48,6 +50,7 @@
    --user-form-default-close-color:    #FECDCE;
    --user-form-hover-close-color:      #FB565A;
    --user-form-active-close-color:     #FFEFEF;
+   --border-pagination-color:          #DBDBDB;
    --default-transition-settings:      0.15s ease-in-out;
    --mask-transition-settings:         0.30s ease-in-out;
 }
@@ -112,6 +115,28 @@ a {
   color: var(--black-default-color);
 }
 
+h1 {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 1;
+  color: var(--black-default-color);
+  background-color: var(--gray-default-color);
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  outline: none;
+  border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  outline: none;
+  border: none;
+}
+
 button {
   border: none;
   background-color: transparent;
@@ -128,6 +153,10 @@ button {
   text-transform: uppercase;
   color: var(--black-default-color);
   background-color: var(--gray-default-color);
+}
+
+.main_header_logo:active {
+  opacity: 0.2;
 }
 
 .nav_list_item {
@@ -172,6 +201,7 @@ button {
   line-height: 1.12;
   text-transform: uppercase;
   text-align: center;
+  font-weight: 500;
   color: var(--white-default-color);
   background: #FB565A;
   border-radius: 3px;
@@ -187,6 +217,7 @@ button {
 .button:active {
   background-color: var(--red-active-color);
   box-shadow: inset 0px 3px 0px var(--red-shadow-active-color);
+  color: var(--red-button-text-active);
 }
 
 .service_title {
@@ -278,7 +309,7 @@ button {
 strong {
   font-weight: bold;
   font-size: 45px;
-  line-height: 64px;
+  line-height: 1.42;
   color: var(--black-default-color);
 }
 
@@ -319,12 +350,32 @@ button:active {
   background-color: var(--red-active-color);
 }
 
+.social_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--social-icon-default);
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  transition: var(--default-transition-settings);
+}
+
+.social_item svg {
+  fill: var(--white-default-color);
+}
+
+.social_item svg:active {
+  fill: var(--red-button-text-active);
+}
+
 .social_item:hover {
   background-color: var(--red-hover-color);
 }
 
 .social_item:active {
   background-color: var(--red-active-color);
+  box-shadow: inset 0px 3px 0px var(--red-shadow-active-color);
 }
 
 .discount_title {
@@ -338,3 +389,150 @@ button:active {
   line-height: 1.37;
   color: #444444;
 }
+
+/*CATALOG_SART*/
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form_title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.67;
+  text-transform: uppercase;
+  color: var(--black-default-color);
+}
+
+label span {
+  line-height: 1.37;
+  text-transform: uppercase;
+}
+
+.number_place {
+  background-color: var(--gray-default-color);
+  text-align: center;
+  line-height: 1.37;
+  width: 80px;
+  height: 38px;
+  color: var(--default-text-color);
+  border: none;
+  border-radius: 3px;
+}
+
+.sort_item {
+  line-height: 1.19;
+}
+
+.form_button {
+  color: var(--black-default-color);
+  background-color: var(--gray-default-color);
+}
+
+.form_button:hover {
+  background-color: var(--gray-hover-color);
+}
+
+.form_button:active {
+  color: var(--gray-text-active-color);
+  background-color: var(--gray-active-color);
+  box-shadow: inset 0px 3px 0px var(--gray-shadow-active-color);
+}
+
+.sort_button {
+  font-size: 14px;
+  line-height: 1.29;
+  text-transform: uppercase;
+  color: var(--gray-text-default-color);
+}
+
+.sort_button:hover {
+  background-color: transparent;
+  color: var(--gray-text-hover-color);
+}
+
+.sort_button:active {
+  color: var(--black-default-color);
+  background-color: transparent;
+
+}
+
+.shape:hover {
+  background-color: transparent;
+}
+
+.shape:active {
+  background-color: transparent;
+}
+
+.arrow path {
+  fill: var(--sort-arrow-default-color);
+}
+
+.arrow path:hover {
+  fill: var(--sort-arrow-hover-color);
+}
+
+.arrow path:active {
+  fill: var(--sort-arrow-active-color);
+}
+
+.mask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--gray-default-color);
+  width: 360px;
+  height: 231px;
+}
+
+.mask_title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.67;
+  text-transform: uppercase;
+  color: var(--black-default-color);
+  transition: var(--default-transition-settings);
+}
+
+.mask_title:hover {
+  color: var(--red-default-color);
+}
+
+.mask_title:active {
+  color: var(--gray-text-default-color);
+}
+
+.mask_text {
+  line-height: 1.12;
+  color: var(--mask-text-color);
+  text-align: center;
+  width: 255px;
+  height: 37px;
+
+}
+
+.pagination {
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.pag-1 {
+  background-color: var(--white-default-color);
+  border: 3px solid var(--border-pagination-color);
+}
+
+.pag-1:hover {
+  background-color: transparent;
+}
+
+.pag-1:active {
+  background-color: transparent;
+  color: var(--black-default-color);
+  box-shadow: none;
+}
+
+/*CATALOG_END*/
