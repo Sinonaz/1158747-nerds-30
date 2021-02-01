@@ -476,6 +476,15 @@ label span {
 	cursor: pointer;
 	-webkit-box-align: center;
 	align-items: center;
+	transition: var(--default-transition-settings);
+}
+
+.form_label::before {
+	transition: var(--default-transition-settings);
+}
+
+.form_label::after {
+	transition: var(--default-transition-settings);
 }
 
 .custom_radio:disabled+.form_label {
