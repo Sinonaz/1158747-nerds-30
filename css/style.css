@@ -482,6 +482,18 @@ label span {
 	color: var(--catalog-input-blocked-color);
 }
 
+.custom_checkbox:disabled+.form_label {
+	color: var(--catalog-input-blocked-color);
+}
+
+.custom_checkbox:disabled+.form_label::before {
+	border-color: var(--catalog-input-blocked-color);
+}
+
+.custom_checkbox:disabled+.form_label::after {
+	background-image: url(../img/icons/checkbox-on3.svg);
+}
+
 .custom_checkbox+.form_label::before {
 	content: "";
 	display: block;
