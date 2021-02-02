@@ -80,7 +80,11 @@
 	box-sizing: border-box;
 }
 
-body {
+.page {
+	height: 100%;
+}
+
+.page_body {
 	margin: 0;
 	padding: 0;
 	font-family: "Roboto", "Arial", sans-serif;
@@ -88,6 +92,24 @@ body {
 	font-size: 16px;
 	line-height: 1.5;
 	color: var(--default-text-color);
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: 
+		min-content 
+		1fr 
+		min-content;
+  align-content: start;
+}
+
+.inner_page {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", "Arial", sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1.5;
+	color: var(--default-text-color);
+	min-height: 100%;
 }
 
 img {
@@ -145,7 +167,35 @@ button {
 	background-color: var(--gray-default-color);
 }
 
-.main_header_logo:active {
+.main_nav {
+	display: grid;
+	grid-template-columns: max-content 1fr min-content;
+	width: 1160px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 140px;
+	padding-right: 140px;
+}
+
+.main_nav_bar {
+	background-color: var(--gray-default-color);
+}
+
+.nav_list {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width: 437px;
+	justify-content: space-between;
+	margin-left: 200px;
+}
+
+.catalog_header_logo:active {
 	opacity: 0.2;
 }
 
@@ -162,6 +212,7 @@ button {
 }
 
 .nav_bin {
+	align-self: center;
 	transition: var(--default-transition-settings);
 }
 
@@ -175,6 +226,16 @@ button {
 
 .advantages {
 	background-color: var(--gray-default-color);
+}
+
+.slide {
+	width: 538px;
+	height: 273px;
+}
+
+.slide_description {
+	width: 400px;
+	height: 49px;
 }
 
 .slide_title {
@@ -210,6 +271,20 @@ button {
 	color: var(--red-button-text-active);
 }
 
+.studio_info-2::before {
+	content: "";
+	display: block;
+	width: 360px;
+	height: 208px;
+	background: url("../img/nerds-illustration1.jpg") no-repeat;
+	margin-bottom: 37px;
+}
+
+.services {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
 .service_title {
 	font-weight: bold;
 	font-size: 24px;
@@ -224,6 +299,7 @@ button {
 	width: 300px;
 	height: 146px;
 	background-color: var(--red-default-color);
+	background: url(../img/illustration1.png) no-repeat;
 }
 
 .service-2::before {
@@ -232,6 +308,7 @@ button {
 	width: 300px;
 	height: 146px;
 	background-color: var(--green-default-color);
+	background: url(../img/illustration2.png) no-repeat;
 }
 
 .service-3::before {
@@ -240,6 +317,7 @@ button {
 	width: 300px;
 	height: 146px;
 	background-color: var(--yellow-default-color);
+	background: url(../img/illustration3.png) no-repeat;
 }
 
 .service_button {
@@ -279,8 +357,19 @@ button {
 	box-shadow: inset 0px 3px 0px var(--yellow-shadow-active-color);
 }
 
+.studio_info {
+	display: grid;
+	grid-template-columns: 1fr min-content;
+}
+
+.studio_info-1 {
+	min-width: 651px;
+	min-height: 379px;
+}
+
 .studio_info_title {
 	font-weight: 500;
+	width: 651px;
 	font-size: 45px;
 	line-height: 1;
 	color: var(--black-default-color);
@@ -315,21 +404,68 @@ td {
 	line-height: 1.12;
 }
 
-.contact_adress_title {
+.logos {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.contact_map {
+	margin: 0 auto;
+}
+
+.map_img {
+	width: 100%;
+}
+
+.contact_map_container {
+	position: relative;
+}
+
+.contact_map_marker {
+	position: absolute;
+	left: 1100px;
+	top: 175px;
+}
+
+.contact_address {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 150px;
+	left: 185px;
+	width: 319px;
+	height: 308px;
+	background-color: var(--white-default-color);
+}
+
+.contact_address_title {
 	font-weight: bold;
+	text-align: center;
 	font-size: 18px;
 	line-height: 1.67;
 	text-transform: uppercase;
 	color: var(--black-default-color);
+	padding-bottom: 23px;
 }
 
-address {
+.address {
 	line-height: 1.12;
 	color: #666666;
+	width: 230px;
+	padding-bottom: 20px;
 }
 
 .contact_tel {
 	color: #666666;
+	align-self: flex-start;
+	padding-left: 45px;
+}
+
+.user_button {
+	margin-top: 80px;
+	align-self: center;
 }
 
 button:hover {
@@ -341,6 +477,15 @@ button:active {
 	background-color: var(--red-active-color);
 }
 
+.footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.social_list {
+	display: flex;
+}
+
 .social_item {
 	display: flex;
 	justify-content: center;
@@ -350,13 +495,14 @@ button:active {
 	height: 78px;
 	border-radius: 50%;
 	transition: var(--default-transition-settings);
+	margin-left: 9px;
 }
 
 .social_item svg {
 	fill: var(--white-default-color);
 }
 
-.social_item svg:active {
+.social_item:active svg {
 	fill: var(--red-button-text-active);
 }
 
