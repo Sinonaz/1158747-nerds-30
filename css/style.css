@@ -57,21 +57,21 @@
 
 @font-face {
 	font-family: "Roboto";
-	src: local("Roboto"), local("Roboto-Regular"), url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
+	src: local("Roboto"), url("../fonts/roboto.woff2") format("woff2"), url("../fonts/roboto.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Roboto";
-	src: local("Roboto"), local("Roboto-Medium"), url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff");
+	src: local("Roboto"), url("../fonts/robotomedium.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff");
 	font-weight: 500;
 	font-style: medium;
 }
 
 @font-face {
 	font-family: "Roboto";
-	src: local("Roboto"), local("Roboto-Bold"), url("../fonts/robotobold.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff");
+	src: local("Roboto"), url("../fonts/robotobold.woff2") format("woff2"), url("../fonts/robotomedium.woff") format("woff");
 	font-weight: 700;
 	font-style: bold;
 }
@@ -169,7 +169,7 @@ button {
 
 .main_nav {
 	display: grid;
-	grid-template-columns: max-content 1fr min-content;
+	grid-template-columns: max-content 1fr max-content;
 	width: 1160px;
 	margin: 0 auto;
 }
@@ -229,8 +229,17 @@ button {
 }
 
 .slide {
-	width: 538px;
-	height: 273px;
+	width: 100%;
+}
+
+
+.slide-1::before {
+	content: "";
+	display: block;
+	height: 431px;
+	background-repeat: no-repeat;
+	background-image: url("../img/nerds-index-slide1.png");
+	background-position: 100% 50%;
 }
 
 .slide_description {
@@ -285,6 +294,11 @@ button {
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
+.service {
+	display: flex;
+	flex-direction: column;
+}
+
 .service_title {
 	font-weight: bold;
 	font-size: 24px;
@@ -322,6 +336,8 @@ button {
 
 .service_button {
 	min-width: 160px;
+	max-width: 160px;
+	margin-top: auto;
 }
 
 .service-1 .button:active {
@@ -364,7 +380,6 @@ button {
 
 .studio_info-1 {
 	min-width: 651px;
-	min-height: 379px;
 }
 
 .studio_info_title {
@@ -670,8 +685,8 @@ label span {
 	position: absolute;
 	content: "";
 	display: block;
-	width: 26px;
-	height: 26px;
+	width: 23px;
+	height: 23px;
 	background-image: url(../img/icons/checkbox-on2.svg);
 	background-repeat: no-repeat;
 }
