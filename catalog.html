@@ -30,21 +30,23 @@
 	</header>
 	<main>
 		<h1>
-			<span>Магазин готовых шаблонов</span>
+      <div class="wrapper">
+			  <span class="catalog_heading">Магазин готовых шаблонов</span>
+      </div>
 		</h1>
-		<div class="container">
-			<form action="https://echo.htmlacademy.ru/" method="POST">
+    <div class="catalog_container wrapper">
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтр</h2>
+        <form class="filters_form" action="https://echo.htmlacademy.ru/" method="POST">
 				<b class="form_title">Стоимость:</b>
-				<label for="price">
-					<span>от</span>
-					<input class="number_place" type="number" name="price" id="price" min="0" max="15000" value="0">
-				</label>
-				<label for="price-2">
-					<span>до</span>
-					<input class="number_place" type="number" name="price" id="price-2" min="0" max="15000" value="15000">
-				</label>
+        <div class="numbers">
+          <label for="price"><span>от</span></label>
+				  <input class="number_place" type="number" name="price" id="price" min="0"max="15000" value="0">
+				  <label for="price-2"><span>до</span></label>	
+				  <input class="number_place" type="number" name="price" id="price-2" min="0"   max="15000" value="15000">
+        </div>
 				<fieldset>
-					<legend class="form_title">Сетка:</legend>
+					<legend class="form_title legend">Сетка:</legend>
 					<ul class="grid_list">
 						<li class="grid_item">
 							<input class="sort_item visually-hidden custom_radio" type="radio" name="grid" id="grid-1"
@@ -63,7 +65,7 @@
 					</ul>
 				</fieldset>
 				<fieldset>
-					<legend class="form_title">Особенности:</legend>
+					<legend class="form_title legend">Особенности:</legend>
 					<ul class="features_list">
 						<li class="feature_item">
 							<input class="sort_item visually-hidden custom_checkbox" type="checkbox" name="feature" id="feature-1"
@@ -90,15 +92,16 @@
 					</ul>
 				</fieldset>
 				<button class="button form_button" type="submit">Показать</button>
-			</form>
-			<section class="catalog">
-				<h2 class="visually-hidden">Каталог товаров</h2>
-				<div class="container">
-					<b class="form_title">Сортировать:</b>
+			  </form>
+      </section>
+      <section class="catalog">
+        <h2 class="visually-hidden">Каталог</h2>
+        <div class="catalog_sort">
+          <b class="form_title">Сортировать:</b>
 					<div class="sort_buttons">
-						<button class="sort_button" type="button">По цене</button>
-						<button class="sort_button" type="button">По типу</button>
-						<button class="sort_button" type="button">По названию</button>
+					  <button class="sort_button" type="button">По цене</button>
+					  <button class="sort_button" type="button">По типу</button>
+					  <button class="sort_button" type="button">По названию</button>
 					</div>
 					<div class="shape_button">
 						<button class="shape shape-1" type="button">
@@ -114,6 +117,7 @@
 							</svg>
 						</button>
 					</div>
+        </div>
 					<ul class="catalog_list">
 						<li class="catalog_item">
 							<img class="catalog_img" src="img/img-sedona.jpg" width="358" height="578" alt="Sedona">
@@ -124,7 +128,7 @@
 							</div>
 						</li>
 						<li class="catalog_item">
-							<img src="img/img-pink.jpg" width="358" height="578" alt="Pink App">
+							<img class="catalog_img" src="img/img-pink.jpg" width="358" height="578" alt="Pink App">
 							<div class="mask pink_mask">
 								<a href="" class="mask_title">Pink App</a>
 								<p class="mask_text">Продуктовый лендинг приложения для iOS и Android</p>
@@ -170,8 +174,8 @@
 						<li><a class="pagination pag-3 button form_button" href="#">3</a></li>
 						<li><a class="pag-4 button form_button" href="#">Следующая</a></li>
 					</ul>
-				</div>
-			</section>
+      </section>
+    </div>
 			<section class="contacts">
 				<h2 class="visually-hidden">Контакты</h2>
 				<div class="contact_map_container">
