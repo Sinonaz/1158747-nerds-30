@@ -281,6 +281,10 @@ button {
 	color: var(--red-button-text-active);
 }
 
+.slider_list {
+	display: flex;
+}
+
 .studio_info-2::before {
 	content: "";
 	display: block;
@@ -288,6 +292,10 @@ button {
 	height: 208px;
 	background: url("../img/nerds-illustration1.jpg") no-repeat;
 	margin-bottom: 37px;
+}
+
+.services_section {
+	margin-top: 80px;
 }
 
 .services {
@@ -374,6 +382,10 @@ button {
 	box-shadow: inset 0px 3px 0px var(--yellow-shadow-active-color);
 }
 
+.studio_info_section {
+	margin-top: 155px;
+}
+
 .studio_info {
 	display: grid;
 	grid-template-columns: 1fr min-content;
@@ -396,10 +408,18 @@ button {
 	text-transform: uppercase;
 }
 
+.studio_info_list {
+	margin-top: 23px;
+}
+
 .studio_info_table_title {
 	font-weight: bold;
 	text-transform: uppercase;
 	color: var(--black-default-color);
+}
+
+.studio_info_item:not(:last-child) {
+	margin-bottom: 25px;
 }
 
 strong {
@@ -420,9 +440,14 @@ td {
 	line-height: 1.12;
 }
 
+.logos_section {
+	margin-top: 121px;
+	margin-bottom: 126px;
+}
+
 .logos {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	display: flex;
+	justify-content: space-between;
 }
 
 .contact_map {
@@ -500,6 +525,7 @@ button:active {
 .footer {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	margin-bottom: 68px;
 }
 
 .social_list {
@@ -850,10 +876,17 @@ label span {
 	width: 358px;
 	height: 231px;
 	transition: var(--mask-transition-settings);
+	opacity: 0;
+	min-height: 231px;
 }
 
 .catalog_img:hover+.mask {
-	top: 60%;
+	top: 62%;
+	opacity: 1;
+}
+
+.mask:hover {
+	top: 62%
 }
 
 .catalog_item::before {
@@ -881,9 +914,12 @@ label span {
 	height: 14px;
 	border-radius: 50%;
 	background-color: var(--white-default-color);
+	
 }
 
-
+.mask_button {
+	margin-bottom: 40px;
+}
 
 .mask_title {
 	font-weight: bold;
