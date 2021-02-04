@@ -196,8 +196,12 @@ button {
 	margin-left: 200px;
 }
 
+.header_logo:hover {
+	opacity: 0.7;
+}
+
 .catalog_header_logo:active {
-	opacity: 0.2;
+	opacity: 0.3;
 }
 
 .nav_list_item {
@@ -505,8 +509,30 @@ td {
 	margin-bottom: 80px;
 }
 
+.logos {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid var(--gray-default-color);
+	border-top: 2px solid var(--gray-default-color);
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+
 .logos_item {
 	opacity: 0.24;
+}
+
+.logos::after {
+	position: absolute;
+	display: block;
+	content: "";
+	width: 2px;
+	height: 52px;
+	background-color: var(--gray-default-color);
+	left: 250px;
+	box-shadow: 350px 0 0 var(--gray-default-color), 700px 0 0 var(--gray-default-color);
 }
 
 .logos_item:hover {
@@ -515,16 +541,6 @@ td {
 
 .logos_item:active {
 	opacity: 0.1;
-}
-
-.logos {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	border-bottom: 2px solid var(--gray-default-color);
-	border-top: 2px solid var(--gray-default-color);
-	padding-top: 45px;
-	padding-bottom: 45px;
 }
 
 .contact_map {
@@ -714,6 +730,10 @@ fieldset {
 
 .legend {
 	margin-bottom: 14px;
+}
+
+.feature_form {
+	padding-top: 43px;
 }
 
 .grid_item:not(:last-child) {
@@ -911,6 +931,10 @@ label span {
 	background-color: transparent;
 }
 
+.arrow path {
+	transition: var(--default-transition-settings);
+}
+
 .shape:hover {
 	background-color: transparent;
 }
@@ -944,6 +968,11 @@ label span {
   margin-bottom: 73px;
 	margin-right: 42px;
 	overflow: hidden;
+	cursor: pointer;
+}
+
+.catalog_item:hover {
+	box-shadow: 0px 6px 15px var(--gray-hover-color);
 }
 
 .catalog_img {
@@ -966,12 +995,12 @@ label span {
 }
 
 .catalog_img:hover+.mask {
-	top: 62%;
+	top: 63%;
 	opacity: 1;
 }
 
 .mask:hover {
-	top: 62%;
+	top: 63%;
 	opacity: 1;
 }
 
