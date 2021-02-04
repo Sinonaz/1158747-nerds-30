@@ -212,9 +212,24 @@ button {
 	color: var(--gray-text-active-color);
 }
 
+.nav_item_active {
+	padding-bottom: 12px;
+	border-bottom: 2px solid var(--red-default-color);
+}
+
 .nav_bin {
-	align-self: center;
+	display: flex;
+	align-items: center;
 	transition: var(--default-transition-settings);
+}
+
+.nav_bin::before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	background-repeat: no-repeat;
+	background-image: url("../img/icons/cart-icon.svg");
+	margin-right: 24px;
 }
 
 .nav_bin:hover {
@@ -263,16 +278,18 @@ button {
 }
 
 .slide_title {
-	max-width: 538px;
-	padding-top: 78px;
-}
-
-.slide_title {
 	display: block;
 	font-weight: 500;
 	font-size: 55px;
 	line-height: 1;
 	color: var(--black-default-color);
+	max-width: 538px;
+	padding-top: 78px;
+	margin-bottom: 37px;
+}
+
+.slide_description {
+	margin-bottom: 26px;
 }
 
 .button {
@@ -324,12 +341,13 @@ button {
 
 .services_section {
 	margin-top: 80px;
+	border-bottom: 2px solid var(--gray-default-color);
 }
 
 .services {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	border-bottom: 2px solid var(--gray-default-color);
+	margin-bottom: 80px;
 }
 
 .service {
@@ -411,17 +429,15 @@ button {
 	box-shadow: inset 0px 3px 0px var(--yellow-shadow-active-color);
 }
 
-.studio_info_section {
-	margin-top: 155px;
-}
-
 .studio_info {
-	display: grid;
-	grid-template-columns: 1fr min-content;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 39px;
 }
 
 .studio_info-1 {
 	min-width: 651px;
+	margin-top: 34px;
 }
 
 .studio_info_title {
@@ -447,6 +463,21 @@ button {
 	color: var(--black-default-color);
 }
 
+.studio_info_item {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.studio_info_item::before {
+	content: "";
+	width: 25px;
+	height: 2px;
+	margin-right: 7px;
+	background-color: var(--red-default-color);
+
+}
+
 .studio_info_item:not(:last-child) {
 	margin-bottom: 25px;
 }
@@ -470,13 +501,30 @@ td {
 }
 
 .logos_section {
-	margin-top: 121px;
-	margin-bottom: 126px;
+	margin-top: 73px;
+	margin-bottom: 80px;
+}
+
+.logos_item {
+	opacity: 0.24;
+}
+
+.logos_item:hover {
+	opacity: 1;
+}
+
+.logos_item:active {
+	opacity: 0.1;
 }
 
 .logos {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid var(--gray-default-color);
+	border-top: 2px solid var(--gray-default-color);
+	padding-top: 45px;
+	padding-bottom: 45px;
 }
 
 .contact_map {
@@ -687,6 +735,14 @@ fieldset {
 label span {
 	line-height: 1.37;
 	text-transform: uppercase;
+}
+
+.number_text {
+	margin-right: 11px;
+}
+
+.number_text:last-of-type {
+	margin-left: 20px;
 }
 
 .number_place {
