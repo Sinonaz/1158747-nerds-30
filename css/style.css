@@ -229,18 +229,32 @@ button {
 	background-color: var(--gray-default-color);
 }
 
-.slide {
-	width: 100%;
+.slides {
+	position: relative;
 }
 
-
-.slide-1::before {
-	content: "";
-	display: block;
+.slide-1 {
 	height: 431px;
+	width: 100%;
 	background-repeat: no-repeat;
 	background-image: url("../img/nerds-index-slide1.png");
-	background-position: 100% 50%;
+	background-position: 400px;
+}
+
+.slide-2 {
+	height: 431px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-image: url("../img/nerds-index-slide2.png");
+	background-position: 400px;
+}
+
+.slide-3 {
+	height: 431px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-image: url("../img/nerds-index-slide3.png");
+	background-position: 400px;
 }
 
 .slide_description {
@@ -249,6 +263,12 @@ button {
 }
 
 .slide_title {
+	max-width: 538px;
+	padding-top: 78px;
+}
+
+.slide_title {
+	display: block;
 	font-weight: 500;
 	font-size: 55px;
 	line-height: 1;
@@ -281,8 +301,16 @@ button {
 	color: var(--red-button-text-active);
 }
 
+.slider {
+	position: absolute;
+	width: 50px;
+	top: 300px;
+	left: 50%;
+}
+
 .slider_list {
 	display: flex;
+	justify-content: space-between;
 }
 
 .studio_info-2::before {
@@ -301,6 +329,7 @@ button {
 .services {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	border-bottom: 2px solid var(--gray-default-color);
 }
 
 .service {
@@ -322,7 +351,7 @@ button {
 	width: 300px;
 	height: 146px;
 	background-color: var(--red-default-color);
-	background: url(../img/illustration1.png) no-repeat;
+	background: url("../img/illustration1.png") no-repeat;
 }
 
 .service-2::before {
@@ -331,7 +360,7 @@ button {
 	width: 300px;
 	height: 146px;
 	background-color: var(--green-default-color);
-	background: url(../img/illustration2.png) no-repeat;
+	background: url("../img/illustration2.png") no-repeat;
 }
 
 .service-3::before {
@@ -340,7 +369,7 @@ button {
 	width: 300px;
 	height: 146px;
 	background-color: var(--yellow-default-color);
-	background: url(../img/illustration3.png) no-repeat;
+	background: url("../img/illustration3.png") no-repeat;
 }
 
 .service_button {
@@ -886,7 +915,8 @@ label span {
 }
 
 .mask:hover {
-	top: 62%
+	top: 62%;
+	opacity: 1;
 }
 
 .catalog_item::before {
@@ -914,7 +944,7 @@ label span {
 	height: 14px;
 	border-radius: 50%;
 	background-color: var(--white-default-color);
-	
+	box-shadow: 20px 0 var(--white-default-color), 40px 0 var(--white-default-color);
 }
 
 .mask_button {
