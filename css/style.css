@@ -114,7 +114,7 @@
 
 img {
 	max-width: 100%;
-	height: auto;
+	/* height: auto; */
 }
 
 ul {
@@ -173,6 +173,7 @@ button {
 	grid-template-columns: max-content 1fr max-content;
 	width: 1160px;
 	margin: 0 auto;
+	padding-top: 40px;
 }
 
 .wrapper {
@@ -185,7 +186,7 @@ button {
 
 .main_nav_bar {
 	background-color: var(--gray-default-color);
-	margin-top: 48px;
+	margin-top: 8px;
 	margin-bottom: -7px;
 }
 
@@ -196,10 +197,15 @@ button {
 	max-width: 437px;
 	justify-content: space-between;
 	margin-left: 200px;
+	margin-top: 20px;
 }
 
 .header_logo:hover {
 	opacity: 0.7;
+}
+
+.catalog_header_logo {
+	margin-top: 10px;
 }
 
 .catalog_header_logo:active {
@@ -219,7 +225,7 @@ button {
 }
 
 .nav_item_active {
-	padding-bottom: 12px;
+	padding-bottom: 8px;
 	border-bottom: 2px solid var(--red-default-color);
 }
 
@@ -227,6 +233,7 @@ button {
 	display: flex;
 	align-items: center;
 	transition: var(--default-transition-settings);
+	margin-top: 20px;
 }
 
 .nav_bin::before {
@@ -473,6 +480,7 @@ button {
 
 .studio_info_text {
 	margin-top: 34px;
+	margin-bottom: 40px;
 }
 
 .studio_info_list_title {
@@ -483,6 +491,15 @@ button {
 
 .studio_info_list {
 	margin-top: 23px;
+}
+
+.studio_info_table {
+	margin-top: 28px;
+
+}
+
+.studio_info_table td {
+	padding-left: 10px;
 }
 
 .studio_info_table_title {
@@ -541,11 +558,25 @@ td {
 	border-bottom: 2px solid var(--gray-default-color);
 	border-top: 2px solid var(--gray-default-color);
 	padding-top: 45px;
-	padding-bottom: 45px;
+  padding-bottom: 36px;
 }
 
 .logos_item {
 	opacity: 0.24;
+}
+
+.logos_item:first-child {
+	margin-left: 31px;
+
+}
+
+.logos_item:last-child {
+	margin-right: 42px;
+}
+
+.logos_item:nth-last-of-type(2) {
+	margin-right: 20px;
+
 }
 
 .logos::after {
@@ -581,8 +612,8 @@ td {
 
 .contact_map_marker {
 	position: absolute;
-	left: 1100px;
-	top: 175px;
+	left: 1094px;
+  top: 86px;
 }
 
 .contact_address {
@@ -591,8 +622,8 @@ td {
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	top: 150px;
-	left: 185px;
+	top: 55px;
+  left: 372px;
 	width: 319px;
 	height: 308px;
 	background-color: var(--white-default-color);
@@ -606,6 +637,7 @@ td {
 	text-transform: uppercase;
 	color: var(--black-default-color);
 	padding-bottom: 23px;
+  margin-left: -27px;
 }
 
 .address {
@@ -622,8 +654,9 @@ td {
 }
 
 .user_button {
-	margin-top: 80px;
+	margin-top: 32px;
 	align-self: center;
+	min-width: 219px;
 }
 
 button:hover {
@@ -647,6 +680,7 @@ button:active {
 
 .social_list {
 	display: flex;
+	width: 261px;
 }
 
 .social_item {
@@ -678,6 +712,10 @@ button:active {
 	box-shadow: inset 0px 3px 0px var(--red-shadow-active-color);
 }
 
+.discount {
+	margin-left: -180px;
+}
+
 .discount_title {
 	font-weight: bold;
 	font-size: 36px;
@@ -696,7 +734,7 @@ button:active {
   display: flex;
   justify-content: center;
   padding-bottom: 108px;
-  padding-top: 78px;
+  padding-top: 70px;
 }
 
 .catalog_container {
@@ -742,8 +780,8 @@ button:active {
 }
 
 .numbers {
-  margin-top: 150px;
-  margin-bottom: 54px;
+  margin-top: 143px;
+  margin-bottom: 52px;
 }
 
 fieldset {
@@ -753,7 +791,7 @@ fieldset {
 }
 
 .legend {
-	margin-bottom: 14px;
+	margin-bottom: 13px;
 }
 
 .feature_form {
@@ -924,6 +962,7 @@ label span {
 
 .form_button {
 	margin-top: 48px;
+	min-width: 260px;
 	color: var(--black-default-color);
 	background-color: var(--gray-default-color);
 }
@@ -983,13 +1022,13 @@ label span {
   display: flex;
   flex-wrap: wrap;
   margin-right: -42px;
-  margin-top: 88px;
+  margin-top: 48px;
 }
 
 .catalog_item {
 	position: relative;
   width: 358px;
-  margin-bottom: 73px;
+  margin-bottom: 25px;
 	margin-right: 42px;
 	overflow: hidden;
 	cursor: pointer;
@@ -1048,12 +1087,12 @@ label span {
 	display: block;
 	position: absolute;
 	top: 13px;
-	left: 10px;
+	left: 16px;
 	width: 14px;
 	height: 14px;
 	border-radius: 50%;
 	background-color: var(--white-default-color);
-	box-shadow: 20px 0 var(--white-default-color), 40px 0 var(--white-default-color);
+	box-shadow: 22px 0 var(--white-default-color), 47px 0 var(--white-default-color);
 }
 
 .mask_button {
@@ -1087,6 +1126,7 @@ label span {
 
 .pagination_list {
   display: flex;
+	margin-top: -24px;
 }
 
 .pagination {
@@ -1109,5 +1149,7 @@ label span {
 	color: var(--black-default-color);
 	box-shadow: none;
 }
+
+
 
 /*CATALOG_END*/
