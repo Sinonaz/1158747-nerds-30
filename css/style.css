@@ -599,12 +599,27 @@ td {
 }
 
 .contact_map {
+	position: relative;
 	margin: 0 auto;
+	height: 416px;
 }
 
 .map_img {
 	width: 100%;
 }
+
+.iframe_map {
+	position: absolute;
+	top: -423px;
+	position: relative;
+	overflow: hidden;
+}
+
+.iframe_map iframe {
+	width: 100%;
+	border: none;
+}
+
 
 .contact_map_container {
 	position: relative;
