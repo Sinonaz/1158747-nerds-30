@@ -12,7 +12,7 @@
 	<link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="inner_page">
+<body>
 	<header class="main_header">
 		<div class="container">
 			<nav class="main_nav">
@@ -29,7 +29,7 @@
 		</div>
 	</header>
 	<main>
-		<h1>
+		<h1 class="catalog_title">
       <div class="wrapper">
 			  <span class="catalog_heading">Магазин готовых шаблонов</span>
       </div>
@@ -91,7 +91,7 @@
 						</li>
 					</ul>
 				</fieldset>
-				<button class="button form_button" type="submit">Показать</button>
+				<button class="submit button catalog_button" type="submit">Показать</button>
 			  </form>
       </section>
       <section class="catalog">
@@ -99,30 +99,20 @@
         <div class="catalog_sort">
           <b class="form_title">Сортировать:</b>
 					<div class="sort_buttons">
-					  <button class="sort_button" type="button">По цене</button>
-					  <button class="sort_button" type="button">По типу</button>
-					  <button class="sort_button" type="button">По названию</button>
+					  <button class="submit sort_button" type="button">По цене</button>
+					  <button class="submit sort_button" type="button">По типу</button>
+					  <button class="submit sort_button" type="button">По названию</button>
 					</div>
-					<div class="shape_button">
-						<button class="shape shape-1" type="button">
-							<svg class="arrow" width="11" height="10" viewBox="0 0 11 10" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M5.5 10L0 0H11" />
-							</svg>
-						</button>
-						<button class="shape shape-2" type="button">
-							<svg class="arrow" width="11" height="10" viewBox="0 0 11 10" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path d="M5.5 0L0 10H11L5.5 0Z" />
-							</svg>
-						</button>
+					<div class="arrows">
+						<div class="arrow_box_down"></div>
+						<div class="arrow_box_top"></div>
 					</div>
         </div>
 					<ul class="catalog_list">
 						<li class="catalog_item">
 							<img class="catalog_img" src="img/img-sedona.jpg" width="358" height="578" alt="Sedona">
 							<div class="mask sedona_mask">
-								<a href="" class="mask_title">Sedona</a>
+								<a href="product.html" class="mask_title">Sedona</a>
 								<p class="mask_text">Информационный сайт для туристов</p>
 								<a class="button mask_button" href="#">9 900 ₽</a>
 							</div>
@@ -130,7 +120,7 @@
 						<li class="catalog_item">
 							<img class="catalog_img" src="img/img-pink.jpg" width="358" height="578" alt="Pink App">
 							<div class="mask pink_mask">
-								<a href="" class="mask_title">Pink App</a>
+								<a href="product.html" class="mask_title">Pink App</a>
 								<p class="mask_text">Продуктовый лендинг приложения для iOS и Android</p>
 								<a class="button mask_button" href="#">9 900 ₽</a>
 							</div>
@@ -138,7 +128,7 @@
 						<li class="catalog_item">
 							<img class="catalog_img" src="img/img-barbershop.jpg" width="358" height="578" alt="Barbershop">
 							<div class="mask barbershop_mask">
-								<a href="" class="mask_title">Barbershop</a>
+								<a href="product.html" class="mask_title">Barbershop</a>
 								<p class="mask_text">Сайт салона красоты. Для мужчин, да.</p>
 								<a class="button mask_button" href="#">9 900 ₽</a>
 							</div>
@@ -146,7 +136,7 @@
 						<li class="catalog_item">
 							<img class="catalog_img" src="img/img-mishka.jpg" width="358" height="578" alt="MISHKA">
 							<div class="mask mishka_mask">
-								<a href="" class="mask_title">MISHKA</a>
+								<a href="product.html" class="mask_title">MISHKA</a>
 								<p class="mask_text">Интернет-магазин вязаных игрушек</p>
 								<a class="button mask_button" href="#">9 900 ₽</a>
 							</div>
@@ -154,7 +144,7 @@
 						<li class="catalog_item">
 							<img class="catalog_img" src="img/img-aplus.jpg" width="358" height="578" alt="A Plus">
 							<div class="mask aplus_mask">
-								<a href="" class="mask_title">A Plus</a>
+								<a href="product.html" class="mask_title">A Plus</a>
 								<p class="mask_text">Лендинг курсов повышения квалификации</p>
 								<a class="button mask_button" href="#">9 900 ₽</a>
 							</div>
@@ -162,17 +152,17 @@
 						<li class="catalog_item">
 							<img class="catalog_img" src="img/img-kvast.jpg" alt="КВАСТ">
 							<div class="mask kvast_mask">
-								<a href="" class="mask_title">КВАСТ</a>
+								<a href="product.html" class="mask_title">КВАСТ</a>
 								<p class="mask_text">Промо-сайт производителя крафтового кваса</p>
 								<a class="button mask_button" href="#">9 900 ₽</a>
 							</div>
 						</li>
 					</ul>
 					<ul class="pagination_list">
-						<li><a class="pagination pag-1 button form_button">1</a></li>
-						<li><a class="pagination pag-2 button form_button" href="#">2</a></li>
-						<li><a class="pagination pag-3 button form_button" href="#">3</a></li>
-						<li><a class="pag-4 button form_button" href="#">Следующая</a></li>
+						<li><a class="pagination page_active button catalog_button">1</a></li>
+						<li><a class="pagination button catalog_button" href="#">2</a></li>
+						<li><a class="pagination button catalog_button" href="#">3</a></li>
+						<li><a class="button catalog_button" href="#">Следующая</a></li>
 					</ul>
       </section>
     </div>
@@ -194,7 +184,7 @@
 							<b class="contact_address_title">NЁRDS DESIGN STUDIO</b>
 							<address class="address">191186, Санкт-Петербург, ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</address>
 							<a class="contact_tel" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-							<button class="user_button button" type="button">Напишите нам</button>
+							<button class="submit user_button button" type="button">Напишите нам</button>
 						</div>
 					</div>
 				</div>

@@ -84,7 +84,7 @@
 	height: 100%;
 }
 
-.page_body {
+body {
 	margin: 0;
 	padding: 0;
 	font-family: "Roboto", "Arial", sans-serif;
@@ -101,20 +101,8 @@
   align-content: start;
 }
 
-.inner_page {
-	margin: 0;
-	padding: 0;
-	font-family: "Roboto", "Arial", sans-serif;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 1.5;
-	color: var(--default-text-color);
-	min-height: 100%;
-}
-
 img {
 	max-width: 100%;
-	/* height: auto; */
 }
 
 ul {
@@ -128,29 +116,7 @@ a {
 	color: var(--black-default-color);
 }
 
-h1 {
-	font-weight: 500;
-	font-size: 55px;
-	line-height: 1;
-	color: var(--black-default-color);
-	background-color: var(--gray-default-color);
-  margin: 0;
-}
-
-input[type=number] {
-	-moz-appearance: textfield;
-	outline: none;
-	border: none;
-}
-
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-	outline: none;
-	border: none;
-}
-
-button {
+.submit {
 	border: none;
 	background-color: transparent;
 	font-family: inherit;
@@ -198,6 +164,10 @@ button {
 	justify-content: space-between;
 	margin-left: 200px;
 	margin-top: 20px;
+}
+
+.header_logo {
+	transition: var(--default-transition-settings);
 }
 
 .header_logo:hover {
@@ -422,8 +392,9 @@ button {
 
 .service_button {
 	min-width: 160px;
-	max-width: 160px;
+	max-width: 240px;
 	margin-top: auto;
+	align-self: flex-start;
 }
 
 .service-1 .button:active {
@@ -563,6 +534,7 @@ td {
 
 .logos_item {
 	opacity: 0.24;
+	transition: var(--default-transition-settings);
 }
 
 .logos_item:first-child {
@@ -586,8 +558,9 @@ td {
 	width: 2px;
 	height: 52px;
 	background-color: var(--gray-default-color);
-	left: 250px;
-	box-shadow: 350px 0 0 var(--gray-default-color), 700px 0 0 var(--gray-default-color);
+	left: 279px;
+  top: 64px;
+  box-shadow: 300px 0 0 var(--gray-default-color), 600px 0 0 var(--gray-default-color);
 }
 
 .logos_item:hover {
@@ -611,7 +584,6 @@ td {
 .iframe_map {
 	position: absolute;
 	top: -423px;
-	position: relative;
 	overflow: hidden;
 }
 
@@ -745,6 +717,15 @@ button:active {
 
 /*CATALOG_SART*/
 
+.catalog_title {
+	font-weight: 500;
+	font-size: 55px;
+	line-height: 1;
+	color: var(--black-default-color);
+	background-color: var(--gray-default-color);
+  margin: 0;
+}
+
 .catalog_heading {
   display: flex;
   justify-content: center;
@@ -763,26 +744,6 @@ button:active {
   display: flex;
   flex-direction: column;
   width: 760px;
-}
-
-.catalog_sort {
-  display: flex;
-}
-
-.sort_buttons {
-  margin-left: 255px;
-}
-
-.sort_button:not(:last-child) {
-  margin-right: 25px;
-}
-
-.shape_button {
-  margin-left: 30px;
-}
-
-.shape-2 {
-  margin-left: 10px;
 }
 
 .filters {
@@ -851,6 +812,16 @@ label span {
 	color: var(--default-text-color);
 	border: none;
 	border-radius: 3px;
+	-moz-appearance: textfield;
+	outline: none;
+	border: none;
+}
+
+.number_place::-webkit-outer-spin-button, .number_place::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+	outline: none;
+	border: none;
 }
 
 .sort_item {
@@ -975,18 +946,18 @@ label span {
 	background-image: url(../img/icons/checkbox-on1.svg);
 }
 
-.form_button {
+.catalog_button {
 	margin-top: 48px;
 	min-width: 260px;
 	color: var(--black-default-color);
 	background-color: var(--gray-default-color);
 }
 
-.form_button:hover {
+.catalog_button:hover {
 	background-color: var(--gray-hover-color);
 }
 
-.form_button:active {
+.catalog_button:active {
 	color: var(--gray-text-active-color);
 	background-color: var(--gray-active-color);
 	box-shadow: inset 0px 3px 0px var(--gray-shadow-active-color);
@@ -1009,28 +980,61 @@ label span {
 	background-color: transparent;
 }
 
-.arrow path {
-	transition: var(--default-transition-settings);
+.catalog_sort {
+  display: flex;
 }
 
-.shape:hover {
-	background-color: transparent;
+.sort_buttons {
+  margin-left: 255px;
 }
 
-.shape:active {
-	background-color: transparent;
+.sort_button:not(:last-child) {
+  margin-right: 25px;
 }
 
-.arrow path {
-	fill: var(--sort-arrow-default-color);
+.arrows {
+	position: relative;
+	cursor: pointer;
 }
 
-.arrow path:hover {
-	fill: var(--sort-arrow-hover-color);
+.arrow_box_down::after {
+	border: solid transparent;
+	content: "";
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	left: 26px;
+  top: 3px;
+	border-top-color: var(--sort-arrow-default-color);
+	border-width: 13px;
+}
+ 
+.arrow_box_down:hover::after {
+	border-top-color: var(--sort-arrow-hover-color);
 }
 
-.arrow path:active {
-	fill: var(--sort-arrow-active-color);
+.arrow_box_down:active::after {
+	border-top-color: var(--sort-arrow-active-color);
+}
+
+.arrow_box_top::after {
+	border: solid transparent;
+	content: "";
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	left: 64px;
+  top: -8px;
+	border-bottom-color: var(--sort-arrow-default-color);
+	border-width: 13px;
+}
+
+.arrow_box_top:hover::after {
+	border-bottom-color: var(--sort-arrow-hover-color);
+}
+
+.arrow_box_top:active::after {
+	border-bottom-color: var(--sort-arrow-active-color);
 }
 
 .catalog_list {
@@ -1047,6 +1051,7 @@ label span {
 	margin-right: 42px;
 	overflow: hidden;
 	cursor: pointer;
+	transition: var(--default-transition-settings);
 }
 
 .catalog_item:hover {
@@ -1061,24 +1066,24 @@ label span {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	top: 100%;
+	top: 99%;
 	align-items: center;
 	justify-content: space-around;
 	background-color: var(--gray-default-color);
 	width: 358px;
-	height: 231px;
+	height: 234px;
 	transition: var(--mask-transition-settings);
 	opacity: 0;
-	min-height: 231px;
+	overflow: auto;
 }
 
 .catalog_img:hover+.mask {
-	top: 63%;
+	top: 61.5%;
 	opacity: 1;
 }
 
 .mask:hover {
-	top: 63%;
+	top: 61.5%;
 	opacity: 1;
 }
 
@@ -1136,7 +1141,6 @@ label span {
 	color: var(--mask-text-color);
 	text-align: center;
 	width: 255px;
-	height: 37px;
 }
 
 .pagination_list {
@@ -1150,16 +1154,16 @@ label span {
   margin-right: 11px;
 }
 
-.pag-1 {
+.page_active {
 	background-color: var(--white-default-color);
 	border: 3px solid var(--border-pagination-color);
 }
 
-.pag-1:hover {
+.page_active:hover {
 	background-color: transparent;
 }
 
-.pag-1:active {
+.page_active:active {
 	background-color: transparent;
 	color: var(--black-default-color);
 	box-shadow: none;
