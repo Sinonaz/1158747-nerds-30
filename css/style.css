@@ -583,8 +583,10 @@ td {
 
 .iframe_map {
 	position: absolute;
-	top: -423px;
+	top: 0;
+	width: 100%;
 	overflow: hidden;
+	z-index: 5;
 }
 
 .iframe_map iframe {
@@ -614,6 +616,7 @@ td {
 	width: 319px;
 	height: 308px;
 	background-color: var(--white-default-color);
+	z-index: 6;
 }
 
 .contact_address_title {
@@ -1047,11 +1050,14 @@ label span {
 .catalog_item {
 	position: relative;
   width: 358px;
+	height: 578px;
   margin-bottom: 25px;
 	margin-right: 42px;
 	overflow: hidden;
 	cursor: pointer;
 	transition: var(--default-transition-settings);
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
 }
 
 .catalog_item:hover {
