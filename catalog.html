@@ -39,12 +39,21 @@
         <h2 class="visually-hidden">Фильтр</h2>
         <form class="filters_form" action="https://echo.htmlacademy.ru/" method="POST">
 				<b class="form_title">Стоимость:</b>
-        <div class="numbers">
-          <label class="number_text" for="price"><span>от</span></label>
-				  <input class="number_place" type="number" name="price" id="price" min="0"max="15000" value="0">
-				  <label class="number_text" for="price-2"><span>до</span></label>	
-				  <input class="number_place" type="number" name="price" id="price-2" min="0"   max="15000" value="15000">
-        </div>
+				<div class="range_filter">
+					<div class="range_controls">
+          	<div class="scale">
+            	<div class="bar"></div>
+          	</div>
+						<div class="toggle toggle_min"></div>
+            <div class="toggle toggle_max"></div>
+        	</div>
+        	<div class="numbers">
+          	<label class="number_text" for="price"><span>от</span></label>
+				  	<input class="number_place" type="number" name="price" id="price" min="0"max="15000" value="0">
+				  	<label class="number_text" for="price-2"><span>до</span></label>	
+				  	<input class="number_place" type="number" name="price" id="price-2" min="0"   max="15000" value="15000">
+        	</div>
+				</div>
 				<fieldset>
 					<legend class="form_title legend">Сетка:</legend>
 					<ul class="grid_list">

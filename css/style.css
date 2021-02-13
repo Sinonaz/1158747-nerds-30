@@ -51,6 +51,10 @@
 	--user-form-hover-close-color: #FB565A;
 	--user-form-active-close-color: #FFEFEF;
 	--border-pagination-color: #DBDBDB;
+	--range-control-color:     #F1F1F1F1;
+	--range-scale-color: #D7DcDE;
+	--range-toggle-color: #ABABAB;
+	--range-shadow-color: #CFCFCF;
 	--default-transition-settings: 0.15s ease-in-out;
 	--mask-transition-settings: 0.30s ease-in-out;
 }
@@ -143,11 +147,10 @@ a {
 }
 
 .wrapper {
-	max-width: 1440px;
+	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
-	padding-left: 140px;
-	padding-right: 140px;
+	padding: 0 20px 0 20px;
 }
 
 .main_nav_bar {
@@ -759,7 +762,7 @@ button:active {
 }
 
 .numbers {
-  margin-top: 143px;
+  margin-top: 43px;
   margin-bottom: 52px;
 }
 
@@ -793,7 +796,55 @@ fieldset {
 	color: var(--black-default-color);
 }
 
-label span {
+.range_filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.range_controls {
+	position: relative;
+  height: 80px;
+	padding-top: 39px;
+  background-color: var(--range-control-color);
+  border-radius: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.range_controls .bar {
+  width: 70%;
+  height: 2px;
+  background: var(--green-default-color);
+}
+
+.range_controls .scale {
+  height: 2px;
+  background: var(--range-scale-color);
+}
+
+.range_controls .toggle {
+	position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--white-default-color);
+  background-color: var(--range-toggle-color);
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 var(--range-shadow-color);
+	cursor: pointer;
+}
+
+.range_controls .toggle_min {
+  left: 18px;
+}
+
+.range_controls .toggle_max {
+  left: 160px;
+}
+
+.number_text span {
 	line-height: 1.37;
 	text-transform: uppercase;
 }
