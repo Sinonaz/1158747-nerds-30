@@ -210,7 +210,25 @@
 			</div>
 		</div>
 	</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/emmet/2.3.0/emmet.cjs.js"></script>
+	<section class="modal_window modal_wrapper visually-hidden">
+		<h2 class="modal_title">Напишите нам</h2>
+		<button class="modal_close" type="button" aria-label="Закрыть"></button>
+		<form class="modal_form">
+			<fieldset>
+				<legend class="user_form_title">Ваше имя:</legend>
+				<input class="input user_forms" type="text" name="user_name" id="name" placeholder="Имя Фамилия">
+			</fieldset>
+			<fieldset>
+				<legend class="user_form_title">Ваш email:</legend>
+				<input class="input user_forms" type="text" name="user_email" id="email" placeholder="email@example.com">
+			</fieldset>
+			<fieldset>
+				<legend class="user_form_title">Текст письма:</legend>
+				<textarea class="user_textarea" name="user_text" id="text" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+			</fieldset>
+			<button class="button submit">Отправить</button>
+		</form>
+	</section>
 </body>
 
 </html>
