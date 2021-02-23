@@ -19,9 +19,9 @@
 				<a><img class="header_logo" src="img/logos/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс"></a>
 				<ul class="nav_list">
 					<li><a class="nav_list_item">Студия</a></li>
-					<li><a class="nav_list_item" href="#">Клиенты</a></li>
+					<li><a class="nav_list_item" href="clients.html">Клиенты</a></li>
 					<li><a class="nav_list_item" href="catalog.html">Магазин</a></li>
-					<li><a class="nav_list_item" href="#">Контакты</a></li>
+					<li><a class="nav_list_item" href="contacts.html">Контакты</a></li>
 				</ul>
 				<a class="nav_bin" href="#">Корзина</a>
 			</nav>
@@ -30,7 +30,7 @@
 	<main>
 		<section class="advantages">
 			<div class="wrapper">
-				<h2 class="visually-hidden">Наши преимущества</h2>
+				<h2 class="visually_hidden">Наши преимущества</h2>
 				<div class="slides">
 					<div class="slide slide-1">
 						<b class="slide_title">Долго, дорого, скрупулезно.</b>
@@ -38,7 +38,7 @@
 							приложения.</p>
 						<a class="button slide_button" href="#">Узнать больше</a>
 					</div>
-					<div class="visually-hidden slide slide-2">
+					<div class="slide_hidden slide slide-2">
 						<b class="slide_title">Любим математику как никто другой</b>
 						<p class="slide_description">Никакого&nbsp;креатива,&nbsp;только&nbsp;математические&nbsp;формулы для
 							расчета идеальных
@@ -46,7 +46,7 @@
 						</p>
 						<a class="button slide_button" href="#">Узнать больше</a>
 					</div>
-					<div class="visually-hidden slide slide-3">
+					<div class="slide_hidden slide slide-3">
 						<b class="slide_title">Только ночь, только&nbsp;хардкор</b>
 						<p class="slide_description">Работать днем, как все? Мы против этого. Ближе&nbsp;к&nbsp;полуночи работа
 							только
@@ -56,9 +56,18 @@
 					</div>
 					<div class="slider">
 						<ul class="slider_list">
-							<li class="slider_list_item"><input name="first" type="radio" checked></li>
-							<li class="slider_list_item"><input name="second" type="radio"></li>
-							<li class="slider_list_item"><input name="third" type="radio"></li>
+							<li class="slider_list_item">
+								<input class="slider visually_hidden" name="slider" type="radio" id="slider-1" checked>
+								<label class="slider_label label-1" for="slider-1"></label>
+							</li>
+							<li class="slider_list_item">
+								<input class="slider visually_hidden" name="slider" type="radio" id="slider-2">
+								<label class="slider_label label-2" for="slider-2"></label>
+							</li>
+							<li class="slider_list_item">
+								<input class="slider visually_hidden" name="slider" type="radio" id="slider-3">
+								<label class="slider_label label-3" for="slider-3"></label>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -66,7 +75,7 @@
 		</section>
 		<div class="wrapper">
 			<section class="services_section">
-				<h2 class="visually-hidden">Услуги</h2>
+				<h2 class="visually_hidden">Услуги</h2>
 				<div class="services">
 					<div class="service service-1">
 						<h3 class="service_title">Веб-сайты</h3>
@@ -86,7 +95,7 @@
 				</div>
 			</section>
 			<section class="studio_info_section">
-				<h2 class="visually-hidden">О нас</h2>
+				<h2 class="visually_hidden">О нас</h2>
 				<div class="studio_info">
 					<div class="studio_info-1">
 						<b class="studio_info_title">Мы — маленькая, но гордая
@@ -118,7 +127,7 @@
 				</div>
 			</section>
 			<section class="logos_section">
-				<h2 class="visually-hidden">Наши работы</h2>
+				<h2 class="visually_hidden">Наши работы</h2>
 				<ul class="logos">
 					<li class="logos_item">
 						<a class="logo_academy" href="https://htmlacademy.ru/intensive/htmlcss">
@@ -174,7 +183,7 @@
 			</section>
 		</div>
 		<section class="contacts">
-			<h2 class="visually-hidden">Контакты</h2>
+			<h2 class="visually_hidden">Контакты</h2>
 			<div class="contact_map_container">
 				<div class="contact_map">
 					<img class="map_img" src="img/map1.jpg" width="1440" height="416"
@@ -184,15 +193,12 @@
 							allowfullscreen="true"></iframe>
 					</div>
 				</div>
-				<div class="contact_map_marker">
-					<img src="img/map-marker1.png" width="231" height="190" alt="Метка на карте">
-				</div>
 				<div class="wrapper">
 					<div class="contact_address">
 						<b class="contact_address_title">NЁRDS DESIGN STUDIO</b>
 						<address class="address">191186, Санкт-Петербург, ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</address>
 						<a class="contact_tel" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-						<button class="submit user_button button" type="button">Напишите нам</button>
+						<a href="modal.html"><button class="submit user_button button" type="button">Напишите нам</button></a>
 					</div>
 				</div>
 			</div>
@@ -238,7 +244,7 @@
 		<section class="modal_window modal_wrapper">
 			<h2 class="modal_title">Напишите нам</h2>
 			<button class="modal_close submit" type="button" aria-label="Закрыть"></button>
-			<form class="modal_form" action="#" method="POST">
+			<form class="modal_form" action="https://echo.htmlacademy.ru/" method="POST">
 				<div>
 					<p class="user_form_title">Ваше имя:</p>
 					<input class="input user_forms input_login" type="text" name="user_name" id="name" placeholder="Имя Фамилия">
@@ -246,7 +252,8 @@
 				</div>
 				<div>
 					<p class="user_form_title">Ваш email:</p>
-					<input class="input user_forms input_email" type="email" name="user_email" id="email" placeholder="email@example.com">
+					<input class="input user_forms input_email" type="email" name="user_email" id="email"
+						placeholder="email@example.com">
 					<label for="email"></label>
 				</div>
 				<div>
@@ -259,7 +266,6 @@
 			</form>
 		</section>
 	</div>
-	<div class="modal_shadow"></div>
 	<script src="js/script.js"></script>
 </body>
 
