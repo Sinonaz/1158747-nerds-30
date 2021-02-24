@@ -477,7 +477,7 @@ a {
 	margin-right: 0.5em;
 	background-color: var(--white-default-color);
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: 4.5px 4.5px;
 	background-size: 50% 50%;
 	cursor: pointer;
 }
@@ -786,8 +786,8 @@ td {
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	top: 4.5vw;
-	left: 1.5vw;
+	top: 3.5vw;
+	left: 8.5vw;
 	width: 319px;
 	height: 308px;
 	background-color: var(--white-default-color);

@@ -1,12 +1,12 @@
 var button = document.querySelector('.user_button');
 var popup = document.querySelector('.modal_container');
-var close = document.querySelector('.modal_close');
+var popupClose = document.querySelector('.modal_close');
 var form = popup.querySelector('.modal_form');
 var login = popup.querySelector('.input_login');
 var email = popup.querySelector('.input_email');
 
-let isStorageSupport = true;
-let storage = '';
+var isStorageSupport = true;
+var storage = '';
 
 try {
   storage = localStorage.getItem('login');
@@ -22,7 +22,7 @@ button.addEventListener('click', function (evt) {
   popup.classList.remove('bounceOutDown');
   if (storage) {
     login.value = storage;
-    mail.focus();
+    email.focus();
   } else {
     login.focus();
   }
@@ -30,7 +30,7 @@ button.addEventListener('click', function (evt) {
 
 // CLOSE_MODAL
 
-close.addEventListener('click', function (evt) {
+popupClose.addEventListener('click', function (evt) {
   evt.preventDefault();
   popup.classList.add('bounceOutDown');
   popup.classList.remove('shake');
@@ -56,14 +56,14 @@ window.addEventListener('keydown', function (evt) {
 // SEND_FOMR
 
 form.addEventListener('submit', function (evt) {
-  if (!login.value || !password.value) {
+  if (!login.value || !email.value) {
     evt.preventDefault();
     popup.classList.remove('shake');
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add('shake');
   } else {
     if (isStorageSupport) {
-      localStorage.setItem('login', loginLogin.value);
+      localStorage.setItem('login', login.value);
     }
   }
 });
@@ -78,19 +78,19 @@ var slide1 = advantages.querySelector('.slide-1');
 var slide2 = advantages.querySelector('.slide-2');
 var slide3 = advantages.querySelector('.slide-3');
 
-label1.addEventListener('click', function (evt) {
+label1.addEventListener('click', function () {
   slide1.classList.remove('slide_hidden');
   slide2.classList.add('slide_hidden');
   slide3.classList.add('slide_hidden');
 });
 
-label2.addEventListener('click', function (evt) {
+label2.addEventListener('click', function () {
   slide1.classList.add('slide_hidden');
   slide2.classList.remove('slide_hidden');
   slide3.classList.add('slide_hidden');
 });
 
-label3.addEventListener('click', function (evt) {
+label3.addEventListener('click', function () {
   slide1.classList.add('slide_hidden');
   slide2.classList.add('slide_hidden');
   slide3.classList.remove('slide_hidden');
