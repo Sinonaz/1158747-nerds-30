@@ -16,15 +16,15 @@
 	<header class="main_header">
 		<div class="container">
 			<nav class="main_nav">
-				<a href="index.html"><img class="header_logo catalog_header_logo" src="img/logos/nerds-logo.svg" width="160"
+				<a href="index.html" aria-label="Логотип студии"><img class="header_logo catalog_header_logo" src="img/logos/nerds-logo.svg" width="160"
 						height="65" alt="Логотип Нёрдс"></a>
 				<ul class="nav_list">
-					<li><a class="nav_list_item" href="index.html">Студия</a></li>
-					<li><a class="nav_list_item" href="clients.html">Клиенты</a></li>
-					<li><a class="nav_item_active">Магазин</a></li>
-					<li><a class="nav_list_item" href="contacts.html">Контакты</a></li>
+					<li><a class="nav_list_item" href="index.html" aria-label="Студия">Студия</a></li>
+					<li><a class="nav_list_item" href="clients.html" aria-label="Клиенты">Клиенты</a></li>
+					<li><a class="nav_item_active" aria-label="Магазин">Магазин</a></li>
+					<li><a class="nav_list_item" href="contacts.html" aria-label="Контакты">Контакты</a></li>
 				</ul>
-				<a class="nav_bin" href="#">Корзина</a>
+				<a class="nav_bin" href="#" aria-label="Корзина">Корзина</a>
 			</nav>
 		</div>
 	</header>
@@ -46,13 +46,13 @@
 							<div class="toggle toggle_max"></div>
 						</div>
 						<div class="numbers">
-							<label class="number_text" for="price"><span>от</span></label>
+							<label class="number_text" for="price"><span class="number_label">от</span></label>
 							<input class="number_place" type="number" name="price" id="price" min="0" max="15000" value="0">
-							<label class="number_text" for="price-2"><span>до</span></label>
+							<label class="number_text" for="price-2"><span class="number_label">до</span></label>
 							<input class="number_place" type="number" name="price" id="price-2" min="0" max="15000" value="15000">
 						</div>
 					</div>
-					<fieldset>
+					<fieldset class="fieldset">
 						<legend class="form_title legend">Сетка:</legend>
 						<ul class="grid_list">
 							<li class="grid_item">
@@ -72,7 +72,7 @@
 							</li>
 						</ul>
 					</fieldset>
-					<fieldset>
+					<fieldset class="fieldset">
 						<legend class="form_title legend feature_form">Особенности:</legend>
 						<ul class="features_list">
 							<li class="feature_item">
@@ -99,7 +99,7 @@
 							</li>
 						</ul>
 					</fieldset>
-					<button class="submit button catalog_button" type="submit">Показать</button>
+					<button class="btn submit button catalog_button" type="submit">Показать</button>
 				</form>
 			</section>
 			<section class="catalog">
@@ -107,9 +107,9 @@
 				<div class="catalog_sort">
 					<b class="form_title">Сортировать:</b>
 					<div class="sort_buttons">
-						<button class="submit sort_button" type="button">По цене</button>
-						<button class="submit sort_button" type="button">По типу</button>
-						<button class="submit sort_button" type="button">По названию</button>
+						<button class="btn submit sort_button" type="button">По цене</button>
+						<button class="btn submit sort_button" type="button">По типу</button>
+						<button class="btn submit sort_button" type="button">По названию</button>
 					</div>
 					<div class="arrows">
 						<div class="arrow_box_down"></div>
@@ -120,7 +120,7 @@
 					<li class="catalog_item">
 						<img class="catalog_img" src="img/img-sedona.jpg" width="358" height="578" alt="Sedona">
 						<div class="mask sedona_mask">
-							<a href="product.html" class="mask_title">Sedona</a>
+							<a href="product.html" class="mask_title" aria-label="Седона">Sedona</a>
 							<p class="mask_text">Информационный сайт для туристов</p>
 							<a class="button mask_button" href="#">9 900 ₽</a>
 						</div>
@@ -128,7 +128,7 @@
 					<li class="catalog_item">
 						<img class="catalog_img" src="img/img-pink.jpg" width="358" height="578" alt="Pink App">
 						<div class="mask pink_mask">
-							<a href="product.html" class="mask_title">Pink App</a>
+							<a href="product.html" class="mask_title" aria-label="Пинк">Pink App</a>
 							<p class="mask_text">Продуктовый лендинг приложения для iOS и Android</p>
 							<a class="button mask_button" href="#">9 900 ₽</a>
 						</div>
@@ -136,7 +136,7 @@
 					<li class="catalog_item">
 						<img class="catalog_img" src="img/img-barbershop.jpg" width="358" height="578" alt="Barbershop">
 						<div class="mask barbershop_mask">
-							<a href="product.html" class="mask_title">Barbershop</a>
+							<a href="product.html" class="mask_title" aria-label="Барбершоп">Barbershop</a>
 							<p class="mask_text">Сайт салона красоты. Для мужчин, да.</p>
 							<a class="button mask_button" href="#">9 900 ₽</a>
 						</div>
@@ -144,7 +144,7 @@
 					<li class="catalog_item">
 						<img class="catalog_img" src="img/img-mishka.jpg" width="358" height="578" alt="MISHKA">
 						<div class="mask mishka_mask">
-							<a href="product.html" class="mask_title">MISHKA</a>
+							<a href="product.html" class="mask_title" aria-label="Мишка">MISHKA</a>
 							<p class="mask_text">Интернет-магазин вязаных игрушек</p>
 							<a class="button mask_button" href="#">9 900 ₽</a>
 						</div>
@@ -152,25 +152,25 @@
 					<li class="catalog_item">
 						<img class="catalog_img" src="img/img-aplus.jpg" width="358" height="578" alt="A Plus">
 						<div class="mask aplus_mask">
-							<a href="product.html" class="mask_title">A Plus</a>
+							<a href="product.html" class="mask_title" aria-label="А плус">A Plus</a>
 							<p class="mask_text">Лендинг курсов повышения квалификации</p>
 							<a class="button mask_button" href="#">9 900 ₽</a>
 						</div>
 					</li>
 					<li class="catalog_item">
-						<img class="catalog_img" src="img/img-kvast.jpg" alt="КВАСТ">
+						<img class="catalog_img" src="img/img-kvast.jpg" width="358" height="578" alt="КВАСТ">
 						<div class="mask kvast_mask">
-							<a href="product.html" class="mask_title">КВАСТ</a>
+							<a href="product.html" class="mask_title" aria-disabled="Кваст">КВАСТ</a>
 							<p class="mask_text">Промо-сайт производителя крафтового кваса</p>
 							<a class="button mask_button" href="#">9 900 ₽</a>
 						</div>
 					</li>
 				</ul>
 				<ul class="pagination_list">
-					<li><a class="pagination page_active button catalog_button">1</a></li>
-					<li><a class="pagination button catalog_button" href="#">2</a></li>
-					<li><a class="pagination button catalog_button" href="#">3</a></li>
-					<li><a class="button catalog_button" href="#">Следующая</a></li>
+					<li><a class="pagination page_active button catalog_button" aria-label="Страница 1">1</a></li>
+					<li><a class="pagination button catalog_button" aria-label="Страница 2" href="#">2</a></li>
+					<li><a class="pagination button catalog_button" aria-label="Страница 3" href="#">3</a></li>
+					<li><a class="button catalog_button" aria-label="Следующая страница" href="#">Следующая</a></li>
 				</ul>
 			</section>
 		</div>
@@ -181,7 +181,7 @@
 					<img class="map_img" src="img/map1.jpg" width="1440" height="416"
 						alt="191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
 					<div class="iframe_map">
-						<iframe src="https://yandex.ru/map-widget/v1/-/CCUMBDGmGB" width="1440" height="416"
+						<iframe class="yandex_map" src="https://yandex.ru/map-widget/v1/-/CCUMBDGmGB" width="1440" height="416"
 							allowfullscreen="allowfullscreen"></iframe>
 					</div>
 				</div>
@@ -189,8 +189,8 @@
 					<div class="contact_address">
 						<b class="contact_address_title">NЁRDS DESIGN STUDIO</b>
 						<address class="address">191186, Санкт-Петербург, ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</address>
-						<a class="contact_tel" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-						<a class="submit user_button button" href="modal.html">Напишите нам</a>
+						<a class="contact_tel" href="tel:+78122757575" aria-label="Номер телефона">тел. +7 (812) 275-75-75</a>
+						<a class="submit user_button button" href="modal.html" aria-label="Напишите нам">Напишите нам</a>
 					</div>
 				</div>
 			</div>
@@ -200,8 +200,8 @@
 		<div class="wrapper footer">
 			<ul class="social_list">
 				<li>
-					<a class="social_item" href="#">
-						<svg class="vk_icon" width="27" height="15" viewBox="0 0 27 15" fill="none"
+					<a class="social_item" href="#" aria-label="Вконтакте">
+						<svg class="vk_icon" aria-hidden="true" width="27" height="15" viewBox="0 0 27 15" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M16.138 11.51C17.094 11.201 18.318 13.55 19.621 14.449C20.599 15.13 21.348 14.983 21.348 14.983L24.821 14.933C24.821 14.933 26.636 14.821 25.778 13.379C25.707 13.259 25.275 12.31 23.193 10.357C21.016 8.31404 21.311 8.64504 23.932 5.11304C25.529 2.96004 26.168 1.64504 25.968 1.08504C25.776 0.546037 24.603 0.686037 24.603 0.686037L20.69 0.713037C20.309 0.714037 19.986 0.832037 19.839 1.22804C19.836 1.23204 19.218 2.89404 18.394 4.30704C16.653 7.29604 15.958 7.45504 15.67 7.26804C15.009 6.83504 15.176 5.53104 15.176 4.60404C15.176 1.70704 15.608 0.499037 14.33 0.187037C13.903 0.0830374 13.591 0.0150374 12.502 0.00503741C11.11 -0.0159626 9.92797 0.00503743 9.25797 0.334037C8.81297 0.557037 8.47197 1.04604 8.67897 1.07404C8.93897 1.10904 9.52197 1.23404 9.83397 1.66004C10.235 2.21204 10.223 3.44904 10.223 3.44904C10.223 3.44904 10.452 6.86004 9.68297 7.28304C9.15497 7.57304 8.43297 6.98104 6.87997 4.26704C6.08697 2.87904 5.48797 1.34504 5.48797 1.34504C5.48797 1.34504 5.37197 1.06004 5.16197 0.904037C4.91197 0.719037 4.56197 0.660037 4.56197 0.660037L0.84797 0.684037C0.84797 0.684037 0.28997 0.700037 0.0849697 0.946037C-0.0970303 1.16404 0.0699697 1.61404 0.0699697 1.61404C0.0699697 1.61404 2.97897 8.49504 6.27297 11.961C9.29297 15.143 12.725 14.932 12.725 14.932H14.28C14.28 14.932 14.749 14.878 14.989 14.62C15.213 14.38 15.203 13.929 15.203 13.929C15.203 13.929 15.172 11.82 16.138 11.51Z" />
@@ -209,16 +209,16 @@
 					</a>
 				</li>
 				<li>
-					<a class="social_item" href="#">
-						<svg class="fb_icon" width="12" height="22" viewBox="0 0 12 22" fill="none"
+					<a class="social_item" href="#" aria-label="Фейсбук">
+						<svg class="fb_icon" aria-hidden="true" width="12" height="22" viewBox="0 0 12 22" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
 							<path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" />
 						</svg>
 					</a>
 				</li>
 				<li>
-					<a class="social_item" href="#">
-						<svg class="insta_icon" width="21" height="21" viewBox="0 0 21 21" fill="none"
+					<a class="social_item" href="#" aria-label="Инстаграм">
+						<svg class="insta_icon" aria-hidden="true" width="21" height="21" viewBox="0 0 21 21" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd"
 								d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z" />
@@ -235,7 +235,7 @@
 	<div class="modal_container bounceIn">
 		<section class="modal_window modal_wrapper">
 			<h2 class="modal_title">Напишите нам</h2>
-			<button class="modal_close submit" type="button" aria-label="Закрыть"></button>
+			<button class="btn modal_close submit" type="button" aria-label="Закрыть"></button>
 			<form class="modal_form" action="https://echo.htmlacademy.ru/" method="POST">
 				<div>
 					<p class="user_form_title">Ваше имя:</p>
@@ -254,7 +254,7 @@
 						placeholder="В свободной форме"></textarea>
 					<label for="text"></label>
 				</div>
-				<button type="submit" class="button submit">Отправить</button>
+				<button type="btn submit" class="button submit">Отправить</button>
 			</form>
 		</section>
 	</div>

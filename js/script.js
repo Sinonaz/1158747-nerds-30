@@ -71,26 +71,26 @@ form.addEventListener('submit', function (evt) {
 // SLIDER
 
 var advantages = document.querySelector('.advantages');
-var label1 = advantages.querySelector('.label-1');
-var label2 = advantages.querySelector('.label-2');
-var label3 = advantages.querySelector('.label-3');
+var slider1 = advantages.querySelector('.slider-1');
+var slider2 = advantages.querySelector('.slider-2');
+var slider3 = advantages.querySelector('.slider-3');
 var slide1 = advantages.querySelector('.slide-1');
 var slide2 = advantages.querySelector('.slide-2');
 var slide3 = advantages.querySelector('.slide-3');
 
-label1.addEventListener('click', function () {
+slider1.addEventListener('click', function () {
   slide1.classList.remove('slide_hidden');
   slide2.classList.add('slide_hidden');
   slide3.classList.add('slide_hidden');
 });
 
-label2.addEventListener('click', function () {
+slider2.addEventListener('click', function () {
   slide1.classList.add('slide_hidden');
   slide2.classList.remove('slide_hidden');
   slide3.classList.add('slide_hidden');
 });
 
-label3.addEventListener('click', function () {
+slider3.addEventListener('click', function () {
   slide1.classList.add('slide_hidden');
   slide2.classList.add('slide_hidden');
   slide3.classList.remove('slide_hidden');
