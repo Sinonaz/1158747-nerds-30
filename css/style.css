@@ -988,6 +988,7 @@ button:active {
 	border-radius: 3px;
 	transition: var(--default-transition-settings);
 	padding-left: 16px;
+	outline: none;
 }
 
 .user_forms:hover {
@@ -1018,10 +1019,19 @@ button:active {
 	transition: var(--default-transition-settings);
 	padding-left: 16px;
 	padding-top: 16px;
+	outline: none;
 }
 
 .user_textarea:hover {
 	border-color: var(--form_border_hover);
+}
+
+.user_textarea:active {
+	border-color: var(--black-default-color);
+}
+
+.user_textarea:focus {
+	border-color: var(--black-default-color);
 }
 
 .user_textarea::placeholder {
@@ -1208,7 +1218,6 @@ fieldset {
 	border-radius: 3px;
 	-moz-appearance: textfield;
 	outline: none;
-	border: none;
 }
 
 .number_place::-webkit-outer-spin-button, .number_place::-webkit-inner-spin-button {
