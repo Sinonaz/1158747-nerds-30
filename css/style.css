@@ -309,7 +309,7 @@ a {
 	max-width: 437px;
 	justify-content: space-between;
 	margin-left: 200px;
-	margin-top: 20px;
+	margin-top: 5px;
 }
 
 .nav_list_item {
@@ -333,7 +333,7 @@ a {
 	display: flex;
 	align-items: center;
 	transition: var(--default-transition-settings);
-	margin-top: 20px;
+	margin-top: 5px;
 }
 
 .nav_bin::before {
@@ -405,7 +405,7 @@ a {
 	line-height: 1;
 	color: var(--black-default-color);
 	max-width: 538px;
-	padding-top: 78px;
+	padding-top: 76px;
 	margin-bottom: 26px;
 }
 
@@ -450,13 +450,14 @@ a {
 .slider {
 	position: absolute;
 	width: 50px;
-	top: 300px;
-	left: 50%;
+	top: 314px;
+	left: 46%;
 }
 
 .slider_list {
 	display: flex;
 	justify-content: space-between;
+	margin-right: -50px; 
 }
 
 .slider+.slider_label {
@@ -636,7 +637,8 @@ a {
 }
 
 .studio_info_table td {
-	padding-left: 10px;
+	padding-right: 15px;
+	padding-bottom: 9px;
 }
 
 .studio_info_table_title {
@@ -784,8 +786,8 @@ td {
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	top: 3vw;
-	left: 19vw;
+	top: 4.5vw;
+	left: 1.5vw;
 	width: 319px;
 	height: 308px;
 	background-color: var(--white-default-color);
@@ -848,6 +850,7 @@ button:active {
 .social_list {
 	display: flex;
 	width: 261px;
+	transform: translateY(-4px);
 }
 
 .social_item {
@@ -859,7 +862,8 @@ button:active {
 	height: 78px;
 	border-radius: 50%;
 	transition: var(--default-transition-settings);
-	margin-left: 9px;
+	margin-left: 2px;
+	margin-right: 10px;
 }
 
 .social_item svg {
@@ -893,6 +897,7 @@ button:active {
 .discount_text {
 	line-height: 1.37;
 	color: #444444;
+	margin-top: 10px;
 }
 
 /*FOOTER_END*/
@@ -1122,19 +1127,19 @@ fieldset {
 }
 
 .legend {
-	margin-bottom: 13px;
+	margin-bottom: 15px;
 }
 
 .feature_form {
-	padding-top: 43px;
+	padding-top: 37px;
 }
 
 .grid_item:not(:last-child) {
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 }
 
 .feature_item:not(:last-child) {
-	margin-bottom: 17px;
+	margin-bottom: 16px;
 }
 
 .form_title {
@@ -1391,7 +1396,9 @@ fieldset {
 }
 
 .sort_button:not(:last-child) {
-	margin-right: 25px;
+	margin-right: 11px;
+  margin-top: 7px;
+    margin-left: 11px;
 }
 
 .arrows {
@@ -1410,6 +1417,7 @@ fieldset {
 	border-top-color: var(--sort-arrow-default-color);
 	border-width: 10px;
 	transition: var(--default-transition-settings);
+	margin-left: 27px;
 }
 
 .arrow_box_down:hover::after {
@@ -1431,6 +1439,7 @@ fieldset {
 	border-bottom-color: var(--sort-arrow-default-color);
 	border-width: 10px;
 	transition: var(--default-transition-settings);
+	margin-left: 18px;
 }
 
 .arrow_box_top:hover::after {
@@ -1452,7 +1461,7 @@ fieldset {
 	position: relative;
 	width: 358px;
 	height: 618px;
-	margin-bottom: 25px;
+	margin-bottom: 32px;
 	margin-right: 42px;
 	overflow: hidden;
 	cursor: pointer;
