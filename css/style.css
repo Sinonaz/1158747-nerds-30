@@ -273,6 +273,7 @@ a {
 
 .header_logo {
 	transition: var(--default-transition-settings);
+	transform: translateY(4px);
 }
 
 .header_logo:hover {
@@ -280,7 +281,8 @@ a {
 }
 
 .catalog_header_logo {
-	margin-top: 10px;
+	margin-top: 9px;
+	transform: translateY(-2px);
 }
 
 .catalog_header_logo:active {
@@ -309,8 +311,8 @@ a {
 	flex-wrap: wrap;
 	max-width: 437px;
 	justify-content: space-between;
-	margin-left: 200px;
-	margin-top: 5px;
+	margin-left: 202px;
+	margin-top: 16px;
 }
 
 .nav_list_item {
@@ -326,7 +328,7 @@ a {
 }
 
 .nav_item_active {
-	padding-bottom: 8px;
+	padding-bottom: 17px;
 	border-bottom: 2px solid var(--red-default-color);
 }
 
@@ -334,7 +336,7 @@ a {
 	display: flex;
 	align-items: center;
 	transition: var(--default-transition-settings);
-	margin-top: 5px;
+	margin-top: 16px;
 }
 
 .nav_bin::before {
@@ -366,6 +368,10 @@ a {
 	display: none;
 }
 
+.slide {
+	background-position: 99.5% 0px;
+}
+
 .slides {
 	position: relative;
 }
@@ -375,7 +381,6 @@ a {
 	width: 100%;
 	background-repeat: no-repeat;
 	background-image: url("../img/nerds-index-slide1.png");
-	background-position: 400px;
 }
 
 .slide-2 {
@@ -383,7 +388,6 @@ a {
 	width: 100%;
 	background-repeat: no-repeat;
 	background-image: url("../img/nerds-index-slide2.png");
-	background-position: 400px;
 }
 
 .slide-3 {
@@ -391,12 +395,12 @@ a {
 	width: 100%;
 	background-repeat: no-repeat;
 	background-image: url("../img/nerds-index-slide3.png");
-	background-position: 400px;
 }
 
 .slide_description {
 	width: 400px;
-	height: 49px;
+	min-height: 49px;
+	margin-bottom: 40px;
 }
 
 .slide_title {
@@ -406,12 +410,9 @@ a {
 	line-height: 1;
 	color: var(--black-default-color);
 	max-width: 538px;
-	padding-top: 76px;
+	padding-top: 78px;
+  margin-top: 4px;
 	margin-bottom: 26px;
-}
-
-.slide_description {
-	margin-bottom: 38px;
 }
 
 .button {
@@ -431,6 +432,7 @@ a {
 }
 
 .slide_button {
+	margin-top: auto;
 	margin-bottom: 10px;
 }
 
@@ -458,7 +460,12 @@ a {
 .slider_list {
 	display: flex;
 	justify-content: space-between;
-	margin-right: -50px; 
+	margin-right: -41px;
+	transform: translateY(3px);
+}
+
+.slider_list_item {
+	position: relative;
 }
 
 .slider_button {
@@ -472,6 +479,9 @@ a {
 }
 
 .slider_button::before {
+	position: absolute;
+	left: 30%;
+	top: 30%;
 	content: "";
 	display: none;
 	width: 8px;
@@ -660,6 +670,7 @@ a {
 	font-weight: bold;
 	text-transform: uppercase;
 	color: var(--black-default-color);
+	margin-left: 21px;
 }
 
 .studio_info_item {
@@ -675,6 +686,7 @@ a {
 	height: 208px;
 	background: url("../img/nerds-illustration1.jpg") no-repeat;
 	margin-bottom: 37px;
+	transform: translateX(4px);
 }
 
 .studio_info_item::before {
@@ -694,6 +706,7 @@ a {
 	font-size: 45px;
 	line-height: 1.42;
 	color: var(--black-default-color);
+	margin-left: 4px;
 }
 
 .percent {
@@ -854,12 +867,12 @@ a {
 /*FOOTER_START*/
 
 .main_footer {
-	margin-top: 68px;
+	margin-top: 64px;
 }
 
 .footer {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr min-content;
 	margin-bottom: 68px;
 }
 
@@ -900,7 +913,9 @@ a {
 }
 
 .discount {
-	margin-left: -180px;
+	padding-left: 45px;
+	min-width: 660px;
+	margin-right: 144px;
 }
 
 .discount_title {
@@ -922,6 +937,7 @@ a {
 
 .modal_container {
 	position: fixed;
+	top: 17px;
 	display: none;
 	align-items: center;
 	justify-content: center;
@@ -983,7 +999,16 @@ a {
 	font-weight: bold;
 	font-size: 45px;
 	color: var(--black-default-color);
-	padding-top: 20px;
+	margin-top: 32px;
+	margin-bottom: -23px;
+}
+
+.modal_textarea {
+	margin-top: -14px;
+}
+
+.modal_button {
+	width: 259px;
 }
 
 .user_form_title {
@@ -1535,12 +1560,12 @@ a {
 }
 
 .catalog_img:hover+.mask {
-	top: 61.5%;
+	top: 62.5%;
 	opacity: 1;
 }
 
 .mask:hover {
-	top: 61.5%;
+	top: 62.5%;
 	opacity: 1;
 }
 
@@ -1598,9 +1623,9 @@ a {
 	color: var(--mask-text-color);
 	text-align: center;
 	width: 255px;
-	margin-top: -5;
 	padding-bottom: 1px;
 	overflow-y: auto;
+	transform: translateY(-10px);
 }
 
 .pagination_list {
@@ -1631,4 +1656,7 @@ a {
 	box-shadow: none;
 }
 
+.catalog_discount {
+	margin-top: 5px;
+}
 /*CATALOG_END*/
