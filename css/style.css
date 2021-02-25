@@ -898,6 +898,7 @@ a {
 	transition: var(--default-transition-settings);
 	margin-left: 2px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .social_item svg {
@@ -1428,7 +1429,7 @@ a {
 	background-color: var(--gray-default-color);
 }
 
-.catalog_button:hover {
+.catalog_button:hover, .catalog_button:focus {
 	background-color: var(--gray-hover-color);
 }
 
@@ -1443,6 +1444,10 @@ a {
 	line-height: 1.29;
 	text-transform: uppercase;
 	color: var(--gray-text-default-color);
+}
+
+.sort_button_active {
+	color: var(--black-default-color);
 }
 
 .sort_button:hover {
@@ -1475,6 +1480,7 @@ a {
 }
 
 .arrow {
+	flex-direction: column;
 	cursor: pointer;
 	transition: var(--default-transition-settings);
 }
@@ -1489,6 +1495,10 @@ a {
   border-style: solid;
   border-width: 10px 5.5px 0;
   border-color: var(--sort-arrow-default-color) var(--white-default-color) var(--white-default-color);
+}
+
+.arrow_active {
+	border-top-color: var(--sort-arrow-active-color);
 }
 
 .arrow_down:hover {
