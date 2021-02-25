@@ -853,6 +853,10 @@ a {
 	min-width: 219px;
 }
 
+.user_button:focus {
+	background-color: var(--red-active-color);
+}
+
 .btn:hover {
 	background-color: var(--red-hover-color);
 }
@@ -937,7 +941,7 @@ a {
 
 .modal_container {
 	position: fixed;
-	top: 17px;
+	top: -10px;
 	display: none;
 	align-items: center;
 	justify-content: center;
@@ -974,7 +978,7 @@ a {
 .modal_close {
 	position: absolute;
 	right: 90px;
-	top: 75px;
+	top: 80px;
 	width: 21px;
 	height: 21px;
 	background: url("../img/icons/close.svg") no-repeat;
@@ -999,7 +1003,7 @@ a {
 	font-weight: bold;
 	font-size: 45px;
 	color: var(--black-default-color);
-	margin-top: 32px;
+	margin-top: 59px;
 	margin-bottom: -23px;
 }
 
@@ -1567,6 +1571,10 @@ a {
 .mask:hover {
 	top: 62.5%;
 	opacity: 1;
+}
+
+.catalog_item:focus .mask {
+	border-color: gray;
 }
 
 .catalog_item::before {
