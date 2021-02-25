@@ -661,7 +661,7 @@ a {
 	margin-top: 28px;
 }
 
-.studio_info_table td {
+.studio_info_table .table_data {
 	padding-right: 15px;
 	padding-bottom: 9px;
 }
@@ -1470,17 +1470,21 @@ a {
 }
 
 .sort_buttons {
-	margin-left: 255px;
+	margin-left: 267px;
 }
 
 .sort_button:not(:last-child) {
 	margin-right: 11px;
   margin-top: 7px;
-  margin-left: 11px;
+}
+
+.arrows {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
 }
 
 .arrow {
-	flex-direction: column;
 	cursor: pointer;
 	transition: var(--default-transition-settings);
 }
