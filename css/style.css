@@ -815,8 +815,8 @@ a {
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-	top: 3.5vw;
-	left: 8.5vw;
+	top: -368px;
+	left: 20px;
 	width: 319px;
 	height: 308px;
 	background-color: var(--white-default-color);
@@ -832,6 +832,12 @@ a {
 	color: var(--black-default-color);
 	padding-bottom: 23px;
 	margin-left: -27px;
+}
+
+.address_wrapper {
+	position: absolute;
+	left: 0;
+	right: 0;
 }
 
 .address {

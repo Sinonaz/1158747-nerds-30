@@ -78,9 +78,10 @@ if (popup) {
 
 // SLIDER
 var advantages = document.querySelector('.advantages');
-var slider = advantages.querySelector('.slider');
 
-if (slider) { 
+
+if (advantages) { 
+  var slider = advantages.querySelector('.slider');
   var slider1 = advantages.querySelector('.slider-1');
   var slider2 = advantages.querySelector('.slider-2');
   var slider3 = advantages.querySelector('.slider-3');
