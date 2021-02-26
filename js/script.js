@@ -77,17 +77,17 @@ if (popup) {
 }
 
 // SLIDER
-
 var advantages = document.querySelector('.advantages');
 var slider = advantages.querySelector('.slider');
-var slider1 = advantages.querySelector('.slider-1');
-var slider2 = advantages.querySelector('.slider-2');
-var slider3 = advantages.querySelector('.slider-3');
-var slide1 = advantages.querySelector('.slide-1');
-var slide2 = advantages.querySelector('.slide-2');
-var slide3 = advantages.querySelector('.slide-3');
 
-if (slider) {
+if (slider) { 
+  var slider1 = advantages.querySelector('.slider-1');
+  var slider2 = advantages.querySelector('.slider-2');
+  var slider3 = advantages.querySelector('.slider-3');
+  var slide1 = advantages.querySelector('.slide-1');
+  var slide2 = advantages.querySelector('.slide-2');
+  var slide3 = advantages.querySelector('.slide-3');
+
   slider1.addEventListener('click', function () {
     slide1.classList.remove('slide_hidden');
     slide2.classList.add('slide_hidden');
